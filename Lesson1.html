@@ -1,0 +1,222 @@
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="jquery.dotdotdot.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+    overflow-x:hidden;
+}
+
+header {
+  height: 0px;
+  padding-top: 0px;
+  background: #f07057;
+  margin-top:0px;
+  margin-bottom:0px;
+  position:fixed;
+}
+@font-face {
+    font-family: handwriting;
+    src: url(comesinhandy.ttf);
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(gotham.ttf);
+}
+.handwriting {
+    font-family: handwriting;
+}
+.main-nav,
+.main {
+  position: relative; 
+}
+.main-nav {
+  background: #0099FF;
+  top:0px;
+  height: 120px;
+  z-index: 999999999;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  position:fixed;
+  width:100%;
+  opacity:.8;
+      -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+.main-nav p, .main-nav a {
+  -webkit-text-stroke: .5px black;
+  color:white;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: -100px;
+  z-index:99999999;
+}
+.main {
+  background: #f2f2e8;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px;
+}
+.main-nav a, .main-nav p {
+    font-size: 1.7em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    margin-top:15px;
+    width:100%;
+}
+.main2 {
+  background: #f2f2e8;
+  padding: 1px 50px 0px;
+  column-count: 2;
+  column-gap: 40px;
+  position:relative;
+}
+
+header {
+    color: #f7f8ee;
+}
+header, .main-nav {
+    text-align: center;
+}
+.main {
+    background: #f2f2e8;
+    padding: 110px 50px 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+}
+.main {
+    position: relative;
+}
+.footer_cont {
+  width:130%;
+   text-align: center;
+   bottom:0px;
+   padding:0px;
+   margin-bottom: -20px;
+   margin-left:-15%;
+}
+footer {
+  bottom:0px;
+  height:30px;
+  background-color:white;
+  position: relative;
+  width:110%;
+  margin-left:-50px;
+  padding-left:40%;
+   text-align: left;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer_cont p {
+  margin-top:2px;
+  line-height: 1.7em;
+  background-color: white;
+  height: 30px;
+}
+.fe_video {
+    width:100%;
+}
+.name_parent {
+  width:100%; position:relative;
+}
+.name_header {
+  font-family: Gotham;
+    position: absolute;
+    color: white;
+    z-index: 9999999;
+    margin-top: -34%;
+    margin-left: 30%;
+    left:0;
+    right:0;
+    border: 4px solid white;
+    padding:10px;
+    width:37%;
+ /*   margin-left:auto;
+    margin-right:auto;*/
+    font-size: 4em;
+          -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+.blog_title {
+  font-size:1.5vw;
+  height:30px;
+  width:100%;
+  text-align: center;
+}
+.box {
+  width:300px; height:200px; background-color:black; left:0; right:0; margin-left:auto; margin-right:auto;
+}
+div.figure {
+  float: center;
+/*  border: thin silver solid;*/
+  margin: 0.5em;
+  padding: 0.5em;
+}
+div.figure p {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1vw;
+  text-indent: 0;
+}
+img.scaled {
+  width: 100%;
+  border-radius: 40px;
+}
+.img_logo {
+	width:16%;
+	float:left;
+	left:0px;
+	margin-top:-30px;
+}
+</style>
+
+<header>
+  <h1>This is a Sticky Nav Demo!</h1>
+  <p>Creating one of these isn't so bad. Let's learn how with this sweet little demo!</p>
+ <nav class="main-nav"> 
+
+    <a href=""><img src="logo_transp.png" alt="Logo" class="img_logo" ></a>
+
+   </nav> 
+</header>
+
+<div class="main2">
+  <table>
+  <h2 style='text-align:center; font-size:5em; font-family:handwriting;'>LESSON 1</h2>
+  <div class="col-md-4">
+    <div class="figure">
+      <h1 class="blog_title">HTML & CSS</h1>
+      <img class="box scaled" src="runningninja.png"
+          alt="St. Tropez" style="">
+      <p class="ellipsis">THE HTML & CSS CHEAT SHEET</p>
+    </div>
+    </div>

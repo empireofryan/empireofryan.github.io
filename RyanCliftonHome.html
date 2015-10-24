@@ -1,0 +1,157 @@
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding-top: 250px;
+}
+header {
+  height: 400px;
+  padding-top: 50px;
+  background: #f07057;
+  margin-top:100px;
+  margin-bottom:-100px;
+}
+.main-nav,
+.main {
+  position: relative; 
+}
+.main-nav {
+  background: #fff;
+  height: 80px;
+  z-index: 150;
+  margin-top:100px;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: -100px;
+}
+.main {
+  background: #f2f2e8;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px;
+}
+/*.main-nav a:first-child {
+    border-top: 2px solid #f07057;
+    padding-top: 10px;
+}*/
+.main-nav a, .main-nav p {
+    padding-top:10px;
+    font-size: .9em;
+    text-decoration: none;
+
+    text-transform: uppercase;
+    color: #444135;
+    display: inline-block;
+    margin: 24px 12px;
+}
+.main2 {
+  background: #f2f2e8;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px;
+  position:relative;
+  margin-top:100px;
+}
+
+header {
+    color: #f7f8ee;
+}
+header, .main-nav {
+    text-align: center;
+}
+.main {
+    background: #f2f2e8;
+    padding: 110px 50px 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+}
+.main {
+    position: relative;
+}
+
+</style>
+
+<header>
+  <h1>This is a Sticky Nav Demo!</h1>
+  <p>Creating one of these isn't so bad. Let's learn how with this sweet little demo!</p>
+</header>
+<nav class="main-nav">
+  <p style="font-weight: bold;">Ryan Clifton</p>
+  <p>San Diego, CA</p>
+  <a href="#">ryancliftonca@gmail.com</a>
+  <a href="#">Resume</a>
+</nav>
+<div class="main2">
+  <table>
+  <h2>Projects</h2>
+  <p>Project 1</p>
+
+  <p>Praesent eu enim non massa pellentesque lobortis. In in sagittis dolor. Aliquam non massa erat. Ut aliquet gravida tellus, sed volutpat nibh condimentum et. Nunc quam purus, vehicula quis venenatis et, porttitor vel dolor. Cras facilisis dui id elit bibendum, in ullamcorper leo ultricies. Praesent rutrum lacus sit amet sem convallis, ut interdum dolor vestibulum.</p>
+
+  <p>Tum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis pharetra odio, sit amet consectetur elit facilisis ac. Praesent eget tristique ipsum. Donec malesuada bibendum lacinia. Praesent non purus sodales, pulvinar mi vitae, tincidunt leo. Phasellus vitae elit ut nisl semper fringilla id rutrum dolor. Donec a massa adipiscing, cursus risus vitae, porttitor tortor. Nullam sagittis est sapien, sit amet pharetra turpis imperdiet vel. Etiam sit amet ligula pretium, vulputate eros ac, bibendum velit. Aenean convallis ante purus, ac bibendum orci laoreet ac. Donec a convallis mauris. Nulla non lacus non ipsum pretium tempor. In hac habitasse platea dictumst. Aenean at ipsum vulputate, sagittis dui ut, pharetra neque. Nam eget sodales orci. Aliquam pharetra nunc at nisl pellentesque, nec fringilla enim iaculis.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla, purus in porttitor pellentesque, erat arcu tincidunt diam, dapibus faucibus leo mauris at sapien. In porttitor vehicula sodales. Vivamus massa neque, facilisis eu felis ut, aliquet convallis nisi. Nam elementum tellus vitae gravida fermentum. Nullam et imperdiet leo. Integer ut euismod lorem, in placerat lacus. Curabitur bibendum arcu ut feugiat commodo. Suspendisse ut mi vel orci ullamcorper tincidunt. Nam vitae fringilla nibh. Nullam hendrerit blandit velit eu hendrerit.</p>
+
+  <p>Praesent eu enim non massa pellentesque lobortis. In in sagittis dolor. Aliquam non massa erat. Ut aliquet gravida tellus, sed volutpat nibh condimentum et. Nunc quam purus, vehicula quis venenatis et, porttitor vel dolor. Cras facilisis dui id elit bibendum, in ullamcorper leo ultricies. Praesent rutrum lacus sit amet sem convallis, ut interdum dolor vestibulum.</p>
+
+  <p>Tum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis pharetra odio, sit amet consectetur elit facilisis ac. Praesent eget tristique ipsum. Donec malesuada bibendum lacinia. Praesent non purus sodales, pulvinar mi vitae, tincidunt leo. Phasellus vitae elit ut nisl semper fringilla id rutrum dolor. Donec a massa adipiscing, cursus risus vitae, porttitor tortor. Nullam sagittis est sapien, sit amet pharetra turpis imperdiet vel. Etiam sit amet ligula pretium, vulputate eros ac, bibendum velit. Aenean convallis ante purus, ac bibendum orci laoreet ac. Donec a convallis mauris. Nulla non lacus non ipsum pretium tempor. In hac habitasse platea dictumst. Aenean at ipsum vulputate, sagittis dui ut, pharetra neque. Nam eget sodales orci. Aliquam pharetra nunc at nisl pellentesque, nec fringilla enim iaculis.</p>
+</div>
+<div class="main">
+  <table>
+  <h2>Projects</h2>
+  <p>Project 2</p>
+
+  <p>Praesent eu enim non massa pellentesque lobortis. In in sagittis dolor. Aliquam non massa erat. Ut aliquet gravida tellus, sed volutpat nibh condimentum et. Nunc quam purus, vehicula quis venenatis et, porttitor vel dolor. Cras facilisis dui id elit bibendum, in ullamcorper leo ultricies. Praesent rutrum lacus sit amet sem convallis, ut interdum dolor vestibulum.</p>
+
+  <p>Tum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis pharetra odio, sit amet consectetur elit facilisis ac. Praesent eget tristique ipsum. Donec malesuada bibendum lacinia. Praesent non purus sodales, pulvinar mi vitae, tincidunt leo. Phasellus vitae elit ut nisl semper fringilla id rutrum dolor. Donec a massa adipiscing, cursus risus vitae, porttitor tortor. Nullam sagittis est sapien, sit amet pharetra turpis imperdiet vel. Etiam sit amet ligula pretium, vulputate eros ac, bibendum velit. Aenean convallis ante purus, ac bibendum orci laoreet ac. Donec a convallis mauris. Nulla non lacus non ipsum pretium tempor. In hac habitasse platea dictumst. Aenean at ipsum vulputate, sagittis dui ut, pharetra neque. Nam eget sodales orci. Aliquam pharetra nunc at nisl pellentesque, nec fringilla enim iaculis.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla, purus in porttitor pellentesque, erat arcu tincidunt diam, dapibus faucibus leo mauris at sapien. In porttitor vehicula sodales. Vivamus massa neque, facilisis eu felis ut, aliquet convallis nisi. Nam elementum tellus vitae gravida fermentum. Nullam et imperdiet leo. Integer ut euismod lorem, in placerat lacus. Curabitur bibendum arcu ut feugiat commodo. Suspendisse ut mi vel orci ullamcorper tincidunt. Nam vitae fringilla nibh. Nullam hendrerit blandit velit eu hendrerit.</p>
+
+  <p>Praesent eu enim non massa pellentesque lobortis. In in sagittis dolor. Aliquam non massa erat. Ut aliquet gravida tellus, sed volutpat nibh condimentum et. Nunc quam purus, vehicula quis venenatis et, porttitor vel dolor. Cras facilisis dui id elit bibendum, in ullamcorper leo ultricies. Praesent rutrum lacus sit amet sem convallis, ut interdum dolor vestibulum.</p>
+
+  <p>Tum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis pharetra odio, sit amet consectetur elit facilisis ac. Praesent eget tristique ipsum. Donec malesuada bibendum lacinia. Praesent non purus sodales, pulvinar mi vitae, tincidunt leo. Phasellus vitae elit ut nisl semper fringilla id rutrum dolor. Donec a massa adipiscing, cursus risus vitae, porttitor tortor. Nullam sagittis est sapien, sit amet pharetra turpis imperdiet vel. Etiam sit amet ligula pretium, vulputate eros ac, bibendum velit. Aenean convallis ante purus, ac bibendum orci laoreet ac. Donec a convallis mauris. Nulla non lacus non ipsum pretium tempor. In hac habitasse platea dictumst. Aenean at ipsum vulputate, sagittis dui ut, pharetra neque. Nam eget sodales orci. Aliquam pharetra nunc at nisl pellentesque, nec fringilla enim iaculis.</p>
+</div>
+<div class="main">
+  <table>
+  <h2>Projects</h2>
+  <p>Project 3</p>
+
+  <p>Praesent eu enim non massa pellentesque lobortis. In in sagittis dolor. Aliquam non massa erat. Ut aliquet gravida tellus, sed volutpat nibh condimentum et. Nunc quam purus, vehicula quis venenatis et, porttitor vel dolor. Cras facilisis dui id elit bibendum, in ullamcorper leo ultricies. Praesent rutrum lacus sit amet sem convallis, ut interdum dolor vestibulum.</p>
+
+  <p>Tum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis pharetra odio, sit amet consectetur elit facilisis ac. Praesent eget tristique ipsum. Donec malesuada bibendum lacinia. Praesent non purus sodales, pulvinar mi vitae, tincidunt leo. Phasellus vitae elit ut nisl semper fringilla id rutrum dolor. Donec a massa adipiscing, cursus risus vitae, porttitor tortor. Nullam sagittis est sapien, sit amet pharetra turpis imperdiet vel. Etiam sit amet ligula pretium, vulputate eros ac, bibendum velit. Aenean convallis ante purus, ac bibendum orci laoreet ac. Donec a convallis mauris. Nulla non lacus non ipsum pretium tempor. In hac habitasse platea dictumst. Aenean at ipsum vulputate, sagittis dui ut, pharetra neque. Nam eget sodales orci. Aliquam pharetra nunc at nisl pellentesque, nec fringilla enim iaculis.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla, purus in porttitor pellentesque, erat arcu tincidunt diam, dapibus faucibus leo mauris at sapien. In porttitor vehicula sodales. Vivamus massa neque, facilisis eu felis ut, aliquet convallis nisi. Nam elementum tellus vitae gravida fermentum. Nullam et imperdiet leo. Integer ut euismod lorem, in placerat lacus. Curabitur bibendum arcu ut feugiat commodo. Suspendisse ut mi vel orci ullamcorper tincidunt. Nam vitae fringilla nibh. Nullam hendrerit blandit velit eu hendrerit.</p>
+
+  <p>Praesent eu enim non massa pellentesque lobortis. In in sagittis dolor. Aliquam non massa erat. Ut aliquet gravida tellus, sed volutpat nibh condimentum et. Nunc quam purus, vehicula quis venenatis et, porttitor vel dolor. Cras facilisis dui id elit bibendum, in ullamcorper leo ultricies. Praesent rutrum lacus sit amet sem convallis, ut interdum dolor vestibulum.</p>
+
+  <p>Tum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis pharetra odio, sit amet consectetur elit facilisis ac. Praesent eget tristique ipsum. Donec malesuada bibendum lacinia. Praesent non purus sodales, pulvinar mi vitae, tincidunt leo. Phasellus vitae elit ut nisl semper fringilla id rutrum dolor. Donec a massa adipiscing, cursus risus vitae, porttitor tortor. Nullam sagittis est sapien, sit amet pharetra turpis imperdiet vel. Etiam sit amet ligula pretium, vulputate eros ac, bibendum velit. Aenean convallis ante purus, ac bibendum orci laoreet ac. Donec a convallis mauris. Nulla non lacus non ipsum pretium tempor. In hac habitasse platea dictumst. Aenean at ipsum vulputate, sagittis dui ut, pharetra neque. Nam eget sodales orci. Aliquam pharetra nunc at nisl pellentesque, nec fringilla enim iaculis.</p>
+</div>
+
+<!-- MAKE FOOTER APPEAR WHEN HIT BOTTOM OF PAGE -->
+<footer>
+  <p>100% hand coded by Ryan Clifton July 2015</p>
+</footer>
+
+<p>This is for a video project. I am doing this project now!!!!</p>
+
+
+
+<script>
+var  mn = $(".main-nav");
+    mns = "main-nav-scrolled";
+    hdr = $('header').height();
+
+$(window).scroll(function() {
+  if( $(this).scrollTop() > hdr ) {
+    mn.addClass(mns);
+  } else {
+    mn.removeClass(mns);
+  }
+});
+</script>
