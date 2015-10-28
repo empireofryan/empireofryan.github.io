@@ -214,20 +214,26 @@ img.scaled {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.grid {background-color:maroon;}
-.grid-item { width: 100%; border:1px solid black; border-radius: 45px; margin:.2px; margin-left:.3px; margin-top:10px; }
-#image1 { background: url(http://akamaicovers.oreilly.com/images/9781593272869/cat.gif) no-repeat; width:200px; height:240px; border:none; background-size:80%;}
-#image2 { background: url(http://blogs.cuit.columbia.edu/rvlab/files/2012/11/nyc-skyline.jpg) no-repeat; background-size: 100%; width:300px; height:160px;}
-#image3 { background: url(creative.png) no-repeat; width:280px; height:120px;}
+.grid {background-color:maroon;  width:100% !important;
+  opacity:1;
+      -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;}
+.grid-item { width: 100%; border:1px solid black; border-radius: 45px; margin:0px; margin-left:0px; margin-top:10px; }
+#image1 { background: url(http://akamaicovers.oreilly.com/images/9781593272869/cat.gif) no-repeat; width:100px; height:140px; border:none; background-size:100%;}
+#image2 { background: url(http://blogs.cuit.columbia.edu/rvlab/files/2012/11/nyc-skyline.jpg) no-repeat; background-size: 100%; width:150px; height:80px;}
+#image3 { background: url(creative.png) no-repeat; width:140px; height:60px; background-size: 100%;}
 #image4 { background: url(developer.png) no-repeat; background-size: 100%; width:200px; height:100px;}
 #image4:hover { background: url(creative.png) no-repeat; width:200px; height:100px;}
 #image5 { background: url(https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/791px-Ruby_on_Rails.svg.png) no-repeat; width:100px; height:120px; background-size: 92%; border:none;}
 #image6 { background: url(http://alteredegosalon.com/wp-content/uploads/2013/04/hot-side-profile-239x230.png) no-repeat; width:160px; height:150px; background-size: 100%; }
-#image7 { background: url(http://jscoderetreat.com/img/why-js.png) no-repeat; width:200px; height:240px; background-size: 92%; border:none; }
-#image8 { background: url(coffee.png) no-repeat; width:150px; height:150px; background-size: 100%; border:none; }
+#image7 { background: url(http://jscoderetreat.com/img/why-js.png) no-repeat; width:120px; height:150px; background-size: 92%; border:none; }
+#image8 { background: url(coffee.png) no-repeat; width:100px; height:100px; background-size: 100%; border:none; }
 #image9 { background: url(wm.jpg) no-repeat; width:140px; height:140px; background-size: 100%; }
 #image10 { background: url(frontend.jpg) no-repeat; width:180px; height:100px; background-size: 100%; border-radius: 190px; border:gray;}
-#image11 { background: url(california.jpg) no-repeat; width:180px; height:100px; background-size: 100%; border:3px solid skyblue;}
+#image11 { background: url(california.jpg) no-repeat; width:90px; height:50px; background-size: 100%; border:3px solid skyblue;}
 #image121 { background: url(ryan.png) no-repeat; width:280px; height:300px; background-size: 100%; border:none; border-radius: 0px; position:absolute; left:40px; top:66px; }
 #image13 { background: url(sublime.png) no-repeat; width:80px; height:60px; background-size: 60%; border-radius:0px; border:none; }
 
@@ -264,23 +270,115 @@ img.scaled {
 }
 
 .step_details {display:none;}
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: url(underwater.jpg) no-repeat;
+  /* center */
+  margin: 0 auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 180px;
+  height: 120px;
+  float: left;
+  background: none;
+  border: 5px solid white;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+  background-size:100%;
+}
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+
+  .grid-item img {
+    width:100%; height:100%; display:block;
+  }
+
+  .navbar-default .navbar-nav>li>a {
+      color: white;
+  }
+
+  @media only screen and (max-width: 480px) {
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border-color: #e7e7e7;
+      background-color: black;
+  }
+  }
+/*
+  .gem:hover {
+    background: url("gemon.png");
+  }*/
+
+  .gem { background: url(gems.png) no-repeat; background-size: 100%; }
+.gem:hover { background: url(gemon.png) no-repeat; }
+
+.whatend { background: url(frontendcar.png) no-repeat; background-size: 100%; }
+.whatend:hover { background: url(backend.png) no-repeat; }
 </style>
 
 
 
-<header>
- <nav class="main-nav"> 
-
+<!-- <header>
+   <nav class="main-nav"> 
     <a href="#">BLOG</a>
     <a href="#">PROJECTS</a>
     <a href="#">CONTACT</a>
    </nav> 
-</header>
+</header> -->
 
+<nav class="navbar navbar-default main-nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">RJ</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
    
-<div class="grid" style="margin-top:80px">
-  <div class="" id="image121"></div>
+<div class="grid" style="margin-top:80px; width:100%">
+<!--   <div class="" id="image121"></div>
   <div class="grid-item" id="image11"></div>
   <div class="grid-item" id="image1"></div>
   <div class="grid-item" id="image5"></div>
@@ -292,7 +390,53 @@ img.scaled {
   <div class="grid-item" id="image7"></div>
   <div class="grid-item" id="image8"></div>
   <div class="grid-item" id="image9"></div>
-  <div class="grid-item" id="image10"></div>
+  <div class="grid-item" id="image10"></div> -->
+   <!-- <div class="grid-item" style="background: url(frontend.jpg) no-repeat; background-size:100%"></div> -->
+  <!--  <div class="grid-item grid-item--height2" style="background: url(http://blogs.cuit.columbia.edu/rvlab/files/2012/11/nyc-skyline.jpg) no-repeat; background-size: 250%;"></div> -->
+  <div class="grid-item grid-item--height2" style="background: url(ryanh200.png) no-repeat; background-size: 100%;"></div>
+   <div class="grid-item grid-item--height3" style="border-radius:45px">
+      <img src="ryangrid3.png" onerror="$(this).hide();" alt="" style="border-radius:45px">
+   </div>
+   <div class="grid-item grid-item--height2 gem">
+     <!--  <img src="gems.png" onerror="$(this).hide();" alt="" class="gem"> -->
+   </div>
+   <div class="grid-item" style="background: url(creative.png) no-repeat; background-size:100%; border:none" ></div>
+   <div class="grid-item" style="background: url(http://alteredegosalon.com/wp-content/uploads/2013/04/hot-side-profile-239x230.png) no-repeat;"></div>
+   <div class="grid-item" style="background: url(http://jscoderetreat.com/img/why-js.png")>
+      <img src="http://jscoderetreat.com/img/why-js.png" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item grid-item--height2">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/791px-Ruby_on_Rails.svg.png">
+   </div>
+   <div class="grid-item grid-item--height3">
+    <img src="manjushri.png">
+   </div>
+   <div class="grid-item" style="background: url(developer.png) no-repeat; background-size:103%"></div>
+   <div class="grid-item grid-item--height2 whatend">
+    <!-- <img src="http://40.media.tumblr.com/fe715a194ae5acd67ed5ea531043b851/tumblr_nugztif8Ae1ug7bkvo1_500.png" onerror="$(this).hide();" alt=""> -->
+   </div>
+<!--    <div class="grid-item">
+      <img src="wm.jpg" onerror="$(this).hide();" alt="">
+   </div> -->
+   <div class="grid-item grid-item--height2">
+      <img src="california.jpg" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item">
+      <img src="rwd.png" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item">
+      <img src="salesgit.png" onerror="$(this).hide();" alt="">
+   </div>
+   <!-- <div class="grid-item grid-item--height2"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item grid-item--height3">
+    <img src="buddhagrid3.png" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item grid-item--height2"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item grid-item--height2"></div> -->
 
 
 </div>
@@ -439,7 +583,8 @@ $('.step').hover(function() { // mouse enter
 $('.grid').masonry({
   // options
   itemSelector: '.grid-item',
-  columnWidth: 250
+  columnWidth: 180,
+  isFitWidth: true
 });
 </script>
 
