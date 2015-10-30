@@ -331,11 +331,152 @@ body { font-family: sans-serif; }
     background: url("gemon.png");
   }*/
 
-  .gem { background: url(gems.png) no-repeat; background-size: 100%; }
+.gem { background: url(gems.png) no-repeat; background-size: 100%; }
 .gem:hover { background: url(gemon.png) no-repeat; }
 
 .whatend { background: url(frontendcar.png) no-repeat; background-size: 100%; }
 .whatend:hover { background: url(backend.png) no-repeat; }
+
+
+/* INTRO HEADER STYLING */
+
+.block-center-v {
+    position: absolute;
+
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+html, body, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+div {
+    display: block;
+}
+
+.tk-museo-sans, body {
+    font-family: "museo-sans",sans-serif;
+}
+
+@media (min-width:168px) {
+body {
+    font-size: 1.14285714rem;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+}
+
+@media (min-width: 168px) {
+.grid {
+    margin-left: -28px;
+    margin-right: -50px;
+}
+}
+
+.grid:before {
+    content: "";
+    display: table;
+    width: 100%;
+    height: 0;
+    clear: both;
+}
+
+
+
+@media (min-width: 467px) {
+  .grid .col.col-two-thirds {
+      width: 100.666666%;
+  }
+
+  .grid .col {
+      float: left;
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+}
+
+@media (max-width: 467px) {
+  .grid .col.col-two-thirds {
+      width: 100%;
+  }
+
+  .grid .col {
+      float: left;
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+}
+
+
+.grid .col {
+    box-sizing: border-box;
+}
+
+@media (min-width: 168px) {
+  .section-intro-lg .section-intro-title {
+      font-size: 5.5714rem;
+      margin-top:-180px;
+  }
+}
+
+  .section-intro-title {
+     
+      margin-top:-198px;
+  }
+
+
+
+.section-intro-title {
+    font-size: 2.57142857rem;
+    line-height: 1.15;
+    letter-spacing: -.05em;
+    margin: 0;
+    font-family:Futura;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media (min-width: 168px) 
+  .section-intro-subtitle {
+      font-size: 1.28571429rem;
+  }
+}
+
+.section-intro-subtitle {
+    font-size: 1.28571429rem;
+    font-weight: 100;
+    color: #999;
+    margin: 1em 0 0 0;
+
+}
+
+.img-circle {
+    margin-top: -51px;
+    margin-left: 9px;
+    width: 69%;
+}
+
+@media only screen and (min-width:100px) and (max-width: 467px){
+  .grid .col.col-two-thirds {
+       width: 100%; 
+  }
+}
 </style>
 
 
@@ -358,7 +499,7 @@ body { font-family: sans-serif; }
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">RJ</a>
+      <a class="navbar-brand" href="#">RJ<img src="profile_small.jpg" class="img-circle" style="width: 60%; margin-top: -39px;"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -369,7 +510,7 @@ body { font-family: sans-serif; }
         <li><a href="#">GitHub</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Contact</a></li>
+        <li><a href="mailto:rjohnson2001@gmail.com">Contact</a></li>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -381,18 +522,18 @@ body { font-family: sans-serif; }
 <div class="section-intro section-intro-lg block-center-v">
   <div class="grid">
     <div class="col col-two-thirds">
-      <h1 class="section-intro-title">My Work.</h1>
-        <p class="section-intro-subtitle">
-          "I've selected a couple of notable projects and created their case studies so you can get a better feel of how I go about things."
+      <h1 class="section-intro-title animated fadeIn">My Work.</h1>
+        <p class="section-intro-subtitle" style="margin-top:10px; font-family:Futura">
+          I've selected a couple of notable projects and created their case studies so you can get a better feel of how I go about things.
         </p>
-        <p class="section-intro-subtitle">
-          "If you're more into imagery and execution, there's a stream of constantly updated work below."
+        <p class="section-intro-subtitle" style="font-family:futura">
+          If you're more into imagery and execution, there's a stream of constantly updated work below.
         </p>
     </div>
   </div>
 </div>
 
-<section>
+<section style="margin-top:305px">
   <table>
   <h2 style='text-align:center; font-size:5em; font-family:handwriting;'>BLOG</h2>
   <div class="col-md-4 containersoon">
