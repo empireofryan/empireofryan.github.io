@@ -472,22 +472,33 @@ body {
     width: 69%;
 }
 
-@media only screen and (min-width:100px) and (max-width: 467px){
+@media only screen and (min-width:100px) and (max-width: 567px){
   .grid .col.col-two-thirds {
-       width: 100%; 
+       width: 115%; 
+  }
+  .figure {
+    display:none;
+  }
+  .section-intro-title, .section-intro-subtitle {
+    text-align:center;
+  }
+  .navbar-toggle {
+    margin-top:20px;
+  }
+  .navbar-brand {
+    padding-left:-40px;
+  }
+  .navbar-nav {
+    background-color:black;
+    margin-top:-10px;
+  }
+  .navbar-collapse {
+    margin-top:-10px;
   }
 }
 </style>
 
 
-
-<!-- <header>
-   <nav class="main-nav"> 
-    <a href="#">BLOG</a>
-    <a href="#">PROJECTS</a>
-    <a href="#">CONTACT</a>
-   </nav> 
-</header> -->
 
 <nav class="navbar navbar-default main-nav">
   <div class="container-fluid">
@@ -524,7 +535,7 @@ body {
     <div class="col col-two-thirds">
       <h1 class="section-intro-title animated fadeIn">My Work.</h1>
         <p class="section-intro-subtitle" style="margin-top:10px; font-family:Futura">
-          I'm a Ruby/Rails/Front-End junior dev with an extensive background in media production.
+          I'm a Ruby/Rails/Front-End dev with an extensive background in media production.
         </p>
         <p class="section-intro-subtitle" style="font-family:futura">
           Below, you'll find a stream of constantly updated work.
@@ -555,7 +566,6 @@ body {
             <div class="">
                     <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
                       <source src="sublimetext.mov" type="video/mp4">
-               
                       Your browser does not support the video tag.
                     </video>
       </div>
@@ -575,62 +585,59 @@ body {
 </section>
 
 <section>
-<div class="container containersoon">
-  <div class="main2 containersoon">
+<div class="">
+  <div class="">
       <h2 class="containersoon" style='text-align:center; font-size:5em; font-family:handwriting;'>PROJECTS</h2>
   </div>
   <div class="col-md-4">
     <div class="figure">
       <h1 class="blog_title">WebRock</h1>
-      <div class="">
-                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-                      <source src="webrock.mp4" type="video/mp4">
-               
-                      Your browser does not support the video tag.
-                    </video>
-      </div>
+        <div>
+          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+            <source src="webrock.mp4" type="video/mp4">
+          </video>
+        </div>
+      <p style="">
       <p style="overflow:hidden; width:100%">Founder and lead instructor of a web development video series explaining the basics of coding.</p>
     </div>
-    </div>
+  </div>
 
-   <div id="tooltip" style="display:none; transition: opacity 1s ease-out;">Coming Soon</div>
-
-  <div class="col-md-4" id="myTooltip" title="Coming Soon">
-    <div>
-      <h1 class="blog_title" id="myTooltip" title="Coming Soon">tagSumo / Apollo / VorVision</h1>
-                  <div class="">
-                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-                      <source src="codeycode.mov" type="video/mp4">
-               
-                      Your browser does not support the video tag.
-                    </video>
-      </div>
+  <div class="col-md-4">
+    <div class="figure">
+      <h1 class="blog_title">tagSumo / Apollo / VorVision</h1>
+        <div>
+          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+            <source src="codeycode.mov" type="video/mp4">
+          </video>
+        </div>
       <p style="">
       <p style="overflow:hidden; width:100%">Lead front-end design and development on Rails and Angular apps for California-based tech startup.</p>
     </div>
-    </div>
+  </div>
+
   <div class="col-md-4">
     <div class="figure">
       <h1 class="blog_title" id="tt">Rails Apps</h1>
-                  <div class="">
-                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-                      <source src="rails3.mov" type="video/mp4">
-               
-                      Your browser does not support the video tag.
-                    </video>
-      </div>
-      <p>Challenges include clones of Twitter & Pinterest.</p>
+        <div class="">
+          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+            <source src="rails3.mov" type="video/mp4">
+          </video>
+        </div>
+      <p style="">
+      <p>Rails projects include a Stripe-integrated app, a podcast network, clones of Twitter & Pinterest.</p>
     </div>
   </div>
 </div>
 </section>
 
 <!-- FOOTER APPEAR WHEN REACH PAGE BOTTOM -->
-    <footer class="footer" style="margin-left:auto; margin-right:auto">
-
-        <p class="text-muted" style="text-align:center; background-color:black; margin-left:auto; margin-right:auto; padding: 5px; font-style: italic; margin-bottom:-20px; height:30px">Fin</p>
-
-    </footer>
+<section>
+  <footer class="footer" style="margin:0 0 -30px">
+    <div class="">
+      <p class="text-muted" style="text-align: center; margin: 365px 0px 0px 0px; background-color:black; height:30px; padding: 5px">Place sticky footer content here.</p>
+    </div>
+  </footer>
+</section>
 
 <script>
 $('#tt').click(function() {
