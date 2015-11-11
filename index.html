@@ -422,9 +422,13 @@ body {
 @media (min-width: 168px) {
   .section-intro-lg .section-intro-title {
       font-size: 5.5714rem;
-      margin-top:-180px;
+      margin-top:340px;
+      color:white;
+      margin-left:50px;
   }
 }
+
+
 
   .section-intro-title {
      
@@ -455,13 +459,14 @@ body {
 @media (min-width: 168px) 
   .section-intro-subtitle {
       font-size: 1.28571429rem;
+      color:white;
   }
 }
 
 .section-intro-subtitle {
     font-size: 1.28571429rem;
     font-weight: 100;
-    color: #999;
+    color: white;
     margin: 1em 0 0 0;
 
 }
@@ -483,6 +488,7 @@ body {
   }
   .section-intro-title, .section-intro-subtitle {
     text-align:center;
+    color:white;
   }
   .navbar-toggle {
     margin-top:20px;
@@ -502,6 +508,15 @@ body {
 a, a:hover {
   color:inherit;
   text-decoration: none;
+}
+
+#background {
+  margin-top:80px;
+  background-image:url(flyingrock.jpg);
+  height:80vh;
+  background-size:cover;
+  background-position:center;
+  margin-bottom:-270px;
 }
 </style>
 
@@ -536,19 +551,20 @@ a, a:hover {
 </nav>
 
    
-
+<div id="background">
 <div class="section-intro section-intro-lg block-center-v">
   <div class="grid">
     <div class="col col-two-thirds">
-      <h1 class="section-intro-title animated fadeIn">My Work.</h1>
-        <p class="section-intro-subtitle" style="margin-top:10px; font-family:Futura">
-          I'm a Ruby/Rails/Front-End dev with an extensive background in media production.
+      <h1 class="section-intro-title animated fadeIn">Me.</h1>
+        <p class="section-intro-subtitle" style="margin-top:10px; font-family:Futura; color:white; margin-left:50px">
+          I'm a Front-End/Ruby/Rails dev with an extensive background in media production.
         </p>
-        <p id="blog" class="section-intro-subtitle" style="font-family:futura">
+        <p id="blog" class="section-intro-subtitle" style="font-family:futura; color:white; margin-left:50px">
           Below, you'll find a stream of constantly updated work.
         </p>
     </div>
   </div>
+</div>
 </div>
 
 <section  style="margin-top:305px">
@@ -603,6 +619,7 @@ a, a:hover {
       <h2 class="containersoon" style='text-align:center; font-size:5em; font-family:handwriting;'>PROJECTS</h2>
   </div>
   <div class="col-md-4">
+    <a href="webrock.html">
     <div  id="projects" class="figure">
       <h1 class="blog_title">WebRock</h1>
         <div>
@@ -613,9 +630,11 @@ a, a:hover {
       <p style="">
       <p style="overflow:hidden; width:100%">Founder and lead instructor of a web development video series explaining the basics of coding.</p>
     </div>
+   </a>
   </div>
 
   <div class="col-md-4">
+    <a href="tagsumo.html">
     <div class="figure">
       <h1 class="blog_title">tagSumo / Apollo / VorVision</h1>
         <div>
@@ -626,9 +645,11 @@ a, a:hover {
       <p style="">
       <p style="overflow:hidden; width:100%">Lead front-end design and development on Rails and Angular apps for California-based tech startup.</p>
     </div>
+   </a>
   </div>
 
   <div class="col-md-4">
+    <a href="railsapps.html">
     <div class="figure">
       <h1 class="blog_title" id="tt">Rails Apps</h1>
         <div class="">
@@ -640,6 +661,7 @@ a, a:hover {
       <p>Rails projects include a Stripe-integrated app, a podcast network, clones of Twitter & Pinterest.</p>
     </div>
   </div>
+ </a>
 </div>
 </section>
 
@@ -647,7 +669,7 @@ a, a:hover {
 <section>
   <footer class="footer" style="margin:0 0 -30px">
     <div class="">
-      <p class="text-muted" style="text-align: center; margin: 365px 0px 0px 0px; background-color:black; height:30px; padding: 5px">Place sticky footer content here.</p>
+      <p class="text-muted" style="text-align: center; margin: 365px 0px 0px 0px; background-color:black; height:30px; padding: 5px"><3 NYC</p>
     </div>
   </footer>
 </section>
