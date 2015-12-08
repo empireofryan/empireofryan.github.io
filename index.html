@@ -1,13 +1,19 @@
 
- <script src="http:////cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--  // <script src="http:////cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+
+ <script src="jquery.min.js"></script>
 
 
 <script src="jquery.dotdotdot.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> -->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+   <script src="bootstrap.min.js"></script>
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+
+<link rel="stylesheet" href="bootstrap.min.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
 
@@ -54,6 +60,7 @@ header {
   position:fixed;
   width:100%;
   opacity:.8;
+  border: 1px solid #249DEC;
       -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 3s; /* Firefox < 16 */
         -ms-animation: fadein 3s; /* Internet Explorer */
@@ -214,7 +221,7 @@ img.scaled {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.grid {background-color:maroon;  width:100% !important;
+.grid {/*background-color:maroon; */ width:100% !important;
   opacity:1;
       -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 4s; /* Firefox < 16 */
@@ -283,7 +290,7 @@ body { font-family: sans-serif; }
 /* ---- grid ---- */
 
 .grid {
-  background: url(underwater.jpg) no-repeat;
+ /* background: url(underwater.jpg) no-repeat;*/
   /* center */
   margin: 0 auto;
 }
@@ -341,8 +348,7 @@ body { font-family: sans-serif; }
 /* INTRO HEADER STYLING */
 
 .block-center-v {
-    position: absolute;
-
+    /*position: absolute;*/
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -422,7 +428,16 @@ body {
 @media (min-width: 168px) {
   .section-intro-lg .section-intro-title {
       font-size: 5.5714rem;
-      margin-top:340px;
+      margin-top:15vh;
+      color:white;
+      margin-left:50px;
+  }
+}
+
+@media (min-width: 568px) {
+  .section-intro-lg .section-intro-title {
+      font-size: 5.5714rem;
+      margin-top:20vh;
       color:white;
       margin-left:50px;
   }
@@ -505,15 +520,15 @@ body {
   }
 }
 
-a, a:hover {
-  color:inherit;
+  a:hover {
+  color:gray;
   text-decoration: none;
 }
 
 #background {
   margin-top:80px;
   background-image:url(flyingrock.jpg);
-  height:80vh;
+  height:90vh;
   background-size:cover;
   background-position:center;
   margin-bottom:-270px;
@@ -535,6 +550,116 @@ a, a:hover {
   padding: 0px;
   margin: 0px;
 }
+
+#blogpic {
+  background-image: url(blog.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#projpic {
+  background-image: url(project.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+
+h1, li, a, p {
+  color:white;
+  font-family: "Gotham";
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+ul a {
+  font-size:40px;
+}
+
+@media only screen and (max-width: 550px) {
+  ul a {
+    font-size:20px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1220px) {
+  #projlist {
+    float: left; margin-top:3vh; margin-left: 50px;
+  }
+}
+@media only screen and (min-width: 1221px) {
+  #projlist {
+    float: left; margin-top:35vh; margin-left: 50px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #projlist {
+    float: left; margin-top:3vh; margin-left: 0px; font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  #projtitle {
+      float: right;
+      margin-right: 100px;
+      margin-top: 15vh;
+      font-size: 80px;
+      font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+#projtitle
+  {
+      float: left;
+      margin-left:40px;
+      font-size:2em !important;
+      text-align:center;
+      margin-top: 5vh;
+      font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  #bloglist {
+    float:right; margin-right:50px; margin-top:30vh;
+  }
+}
+@media only screen and (min-width: 1221px) {
+  #bloglist {
+    float:right; margin-right:50px; margin-top:30vh;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #bloglist {
+    float:left; margin-left:0px; margin-top:3vh;
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  #blogtitle {
+    float: left; margin-left:100px; margin-top:5vh; font-size:80px; font-weight:700;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+#blogtitle
+  {
+    float: left; margin-left:40px; margin-top:5vh; font-size:2em !important; font-weight:700;
+  }
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
+
 </style>
 
 
@@ -555,8 +680,8 @@ a, a:hover {
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#blogpic">Blog</a></li>
         <li><a href="http://www.github.com/empireofryan">GitHub</a></li>
         <li><a href="https://angel.co/ryan-johnson-33">Resume</a></li>
       </ul>
@@ -573,11 +698,11 @@ a, a:hover {
 <div class="section-intro section-intro-lg block-center-v">
   <div class="grid">
     <div class="col col-two-thirds">
-      <h1 class="section-intro-title animated fadeIn">Me.</h1>
-        <p class="section-intro-subtitle" style="margin-top:10px; font-family:Futura; color:white; margin-left:50px">
-          I'm a Front-End/Ruby/Rails dev with an extensive background in media production.
+      <h1 class="section-intro-title animated fadeIn">Ryan.</h1>
+        <p class="section-intro-subtitle" style="margin-top:10px; font-family:Futura; color:white; margin-left:50px; font-size:1.2em">
+          I'm a Front-End/Ruby/Rails creative with an extensive background in media production.
         </p>
-        <p id="blog" class="section-intro-subtitle" style="font-family:futura; color:white; margin-left:50px">
+        <p id="" class="section-intro-subtitle" style="font-family:futura; color:white; margin-left:50px; font-size:1.2em">
           Below, you'll find a stream of constantly updated work.
         </p>
     </div>
@@ -585,117 +710,37 @@ a, a:hover {
 </div>
 </div>
 
-<section  style="margin-top:305px">
-  <div id='gradient'>
-  <table>
-  <h2 style='text-align:center; font-size:5em; font-family:handwriting;'>BLOG</h2>
-  <div class="col-md-4 containersoon">
-    <a href="midnightrunning.html">
-    <div class="figure">
-      <h1 class="blog_title">Midnight Running</h1>
-            <div class="">
-                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-                      <source src="running.mp4" type="video/mp4">
-               
-                      Your browser does not support the video tag.
-                    </video>
-      </div>
-      <p class="ellipsis">During nocturnal hours, as curtains are drawn and streetlamps illuminate empty blocks, the ambitious hit pavement.<br>The idyllic combination of warm nights, near-empty streets, and Balboa Park lit with colored spotlights provide an uncompromising excuse to lace up a pair of running shoes under the glow of the moon... </p>
+<section style="margin-top:270px; margin-bottom:-20px" id="project">
+  <div id="projpic">
+    <h1 id="projtitle">PROJECTS</h1>
+    <div id="projlist">
+      <ul style=""><a href="tagsumo.html">tagSumo<br><span style="font-size:18px">Front-End developer for startup building email client on AngularJS platform</a></ul>
+      <ul><a href="tagsumo.html">VorVision / Daedalians<br><span style="font-size:18px">HTML/CSS/JavaScript facelift for Ruby on Rails applications </span></a></ul>
+      <ul><a href="webrock.html">WebRock<br><span style="font-size:18px">Side project, from concept to execution, teaching jumpstart in web development</span></a></ul>
     </div>
-    </a>
-    </div>
-  <div class="col-md-4 containersoon">
-    <a href="yearcoding.html">
-    <div class="figure">
-      <h1 class="blog_title">A Year of Coding</h1>
-            <div class="">
-                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-                      <source src="sublimetext.mov" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-      </div>
-      <p style=" width:100%">Coding is a journey like mastering a musical instrument, foreign language, or physical sport. Progress comes in small increments - from confidence riding the bunny slopes of HTML & CSS to building up the gravitas to juggle Ruby, Rails, Sinatra, and Swift apps in a single day.</p>
-    </div>
-    </a>
-    </div>
-  <div class="col-md-4 containersoon">
-    <a href="indiefilm.html">
-    <div class="figure">
-      <h1 class="blog_title">Directing an Indie Film: Retrospective</h1>
-       <div class="">
-                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-                      <source src="GKCSample.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-      </div>
-      <p>Common advice states you never learn from the attempts you don't make. <b>Feature films are costly, immensely time-consuming endeavours.</b> Here's my best advice for fellow filmmakers to maximize production for budget:<br>1. Use what you have: Locations. Cameras. Props.<br> 2. Maintain focus on the next project: Don't put all you're eggs into one 'magnum opus' - learn from each and know when it's time to start anew... </p>
-    </div>
-    </div>
-</div>
-</a>
-</div>
+  </div>
 </section>
 
-<section>
-<div class="">
-  <div class="">
-      <h2 class="containersoon" style='text-align:center; font-size:5em; font-family:handwriting;'>PROJECTS</h2>
-  </div>
-  <div class="col-md-4">
-    <a href="webrock.html">
-    <div  id="projects" class="figure">
-      <h1 class="blog_title">WebRock</h1>
-        <div>
-          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-            <source src="webrock.mp4" type="video/mp4">
-          </video>
-        </div>
-      <p style="">
-      <p style="overflow:hidden; width:100%">Founder and lead instructor of a web development video series explaining the basics of coding.</p>
-    </div>
-   </a>
-  </div>
-
-  <div class="col-md-4">
-    <a href="tagsumo.html">
-    <div class="figure">
-      <h1 class="blog_title">tagSumo / Apollo / VorVision</h1>
-        <div>
-          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-            <source src="codeycode.mov" type="video/mp4">
-          </video>
-        </div>
-      <p style="">
-      <p style="overflow:hidden; width:100%">Lead front-end design and development on Rails and Angular apps for California-based tech startup.</p>
-    </div>
-   </a>
-  </div>
-
-  <div class="col-md-4">
-    <a href="railsapps.html">
-    <div class="figure">
-      <h1 class="blog_title" id="tt">Rails Apps</h1>
-        <div class="">
-          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
-            <source src="rails3.mov" type="video/mp4">
-          </video>
-        </div>
-      <p style="">
-      <p>Rails projects include a Stripe-integrated app, a podcast network, clones of Twitter & Pinterest.</p>
+<section  style="margin-bottom:-380px">
+  <div id="blogpic">
+    <h1 id="blogtitle">BLOG</h1>
+    <div id="bloglist">
+      <p style="font-size:1.2em; float:right">Latest</p>
+      <ul><a href="yearcoding.html">Year of Coding<br><span style="font-size:18px">Get the low-down on taking the plunge into the world of development</span></a></ul><br><br>
+      <p style="font-size:1.2em; float:right">Recent</p>
+      <ul><a href="indiefilm.html">Directing an Indie Film<br><span style="font-size:18px">Get the low-down on taking the plunge into the world of development</span></a></ul>
     </div>
   </div>
- </a>
-</div>
 </section>
 
 <!-- FOOTER APPEAR WHEN REACH PAGE BOTTOM -->
-<section>
+<!-- <section>
   <footer class="footer" style="margin:0 0 -30px">
     <div class="">
-      <p class="text-muted" style="text-align: center; margin: 365px 0px 0px 0px; background-color:black; height:30px; padding: 5px"><3 NYC</p>
+      <p class="text-muted" style="text-align: center; margin: 365px 0px 0px 0px; background-color:black; height:30px; padding: 5px"></p>
     </div>
   </footer>
-</section>
+</section> -->
 
 <script>
 $('a[href*=#]:not([href=#])').click(function() {
