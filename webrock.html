@@ -523,6 +523,29 @@ body {
 
 p {font-size: 1.2em;}
 
+#morebutton {
+    width:150px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    border: 5px solid navy;
+    text-decoration: underline;
+    border-radius: 45px;
+    background:black;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+#morebutton:hover {
+    background: #0099FF;
+}
+
 </style>
 
 
@@ -568,38 +591,36 @@ p {font-size: 1.2em;}
    <p id="logo" style="margin-top:-620px; margin-left:-50px; position:absolute; color:white; font-size:4em; font-family:futura; text-shadow: -2px 2px brown">WebRock:<br>Video Subscription Site for Devs</p>
    <div id="bloginfo" style="height:50px; background-color:black;">
      <div id="blogline">
-       <a href="midnightrunning.html" id="previous" style="float:left; width:100px;">PREVIOUS</a>
-       <div id="date" style="display:inline-block; margin: 0 auto; width:150px; color:white"></div>
-       <a href="indiefilm.html" id="next" style="float:right; width:100px;">NEXT</a>
+       <a href="vorvision.html" id="previous" style="float:left; width:100px;">PREVIOUS</a>
+       <div id="" style="display:inline-block; margin: 0 auto; width:150px; color:white"></div>
+       <a href="tagsumo.html" id="next" style="float:right; width:100px;">NEXT</a>
      </div>
    </div>
   <body>
     <div id="blogcontainer">
       <div id="inline" style="display:inline-block">
-    <h1 style="font-style:italic; text-style:center; font-size:3em; font-family: 'Droid Serif'">WebRock: Learn to Code, The Fast Fun Way
-    <span style="text-align:left; float:right; margin-top: 25px; font-size:.35em; font-style:normal">by Ryan Johnson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5239 views</span></h1></div>
-    <br><br>
+    <h1 style="font-style:italic; text-style:center; font-size:3em; font-family: 'Droid Serif'">WebRock - <br>Side Project: Creator, Designer, Developer
+    <span style="text-align:left; float:right; margin-top: 25px; font-size:.35em; font-style:normal"><!-- by Ryan Johnson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 523 views --></span></h1></div>
+    
     <div id="bodytext" style="padding-left:50px; padding-right:50px">
     <p>
-    <br><br>
+    <br>
     In an exhaustive quest to devour every possible resource on coding, I've noticed an unfortunate similarity about most videos. Dry, unedited, low-quality cameras & audio, often longwinded to get to the point.
     <br><br>
     A central tenant of technology is improving upon an existing market. When it comes to development media, there's a lot of improve upon. Coding can be difficult enough to learn on it's own, there's no need to prod viewers to tune out or fall asleep.
     <br><br>
     That's why I created WebRock, bridging a proficient background of filmmaking, with the essential points of web development: HTML, CSS, JavaScript, on a Stripe-integrated subscription service.
     <br><br>
+    <i>Teaser Trailer</i>
     </p>
+    <div>
+      <video class="bg_video" style="width:650px; border-radius:45px" autoplay loop muted>
+        <source src="webrockintro.mp4" type="video/mp4">
+      </video>
+    </div>
     <br><br>
     <br><br>
-    <p style="
-    width:150px;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    padding: 10px;
-    border: 5px solid navy;
-    text-decoration: underline;
-    border-radius: 45px"><a href="index.html#blog">More Articles</a></p>
+    <p id="morebutton"><a href="index.html#blog" style="color:white; text-decoration: none;">More Articles</a></p><br>
     </div>
     </div>
 </html>

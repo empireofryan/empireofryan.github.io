@@ -482,7 +482,7 @@ body {
 }
 
 #background {
-  background-image:url(tagsumo.png);
+  background-image:url(tagsumo.jpg);
   height:90vh;
   background-size:cover;
   background-position:center;
@@ -490,7 +490,7 @@ body {
 }
 
 #logo {
-  padding:200px;
+  padding:240px;
 }
 
 #blogline {
@@ -515,6 +515,29 @@ body {
 #blogcontainer li {
   font-size: 1.3em;
   padding:5px;
+}
+
+#morebutton {
+    width:150px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    border: 5px solid navy;
+    text-decoration: underline;
+    border-radius: 45px;
+    background:black;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+#morebutton:hover {
+    background: #0099FF;
 }
 
 * {
@@ -565,43 +588,36 @@ p {font-size: 1.2em;}
       </nav>
     </header>
   </div>
-   <p id="logo" style="margin-top:-600px; margin-left:-50px; position:absolute; color:white; font-size:4em; font-family:futura; text-shadow: -2px 2px brown">tagSumo/Apollo/VorVision:<br>Employment & Freelance</p>
+   <p id="logo" style="margin-top:-600px; margin-left:-50px; position:absolute; color:white; font-size:4em; font-family:futura; text-shadow: -2px 2px brown">tagSumo<br></p>
    <div id="bloginfo" style="height:50px; background-color:black;">
      <div id="blogline">
        <a href="webrock.html" id="previous" style="float:left; width:100px;">PREVIOUS</a>
        <div id="" style="display:inline-block; margin: 0 auto; width:150px; color:white"></div>
-       <a href="railsapps.html" id="next" style="float:right; width:100px;">NEXT</a>
+       <a href="vorvision.html" id="next" style="float:right; width:100px;">NEXT</a>
      </div>
    </div>
   <body>
     <div id="blogcontainer">
       <div id="inline" style="display:inline-block">
-    <h1 style="font-style:italic; text-style:center; font-size:3em; font-family: 'Droid Serif'">tagSumo
+    <h1 style=" font-style:italic; text-style:center; font-size:3em; font-family: 'Droid Serif'">Employment - Front-End Developer
     <span style="text-align:left; float:right; margin-top: 25px; font-size:.35em; font-style:normal"><!-- by Ryan Johnson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5239 views --></span></h1></div>
-    <br><br>
+    <br>
     <div id="bodytext" style="padding-left:50px; padding-right:50px">
-    <p>
+    <h1><a href="http://www.tagsumo.com">tagSumo</a></h1>
+    <p><i>"Take away the pain of sorting through messy e-mail inboxes"</i><br><br>
+    When was the last time you had trouble finding an attachment via e-mail? tagSumo sets out to organize communication with based on relationship rather than simply chronological order.
     <br><br>
-    Our fast-changing world is nowhere more evident than the field of technology. Common practice from just a handful of years ago can easily become deprecated as constantly-updating 
+    I worked as the lead front-end developer for this start-up, working in conjunction with the CTO, a UI/UX designer, and a back-end developer. My primary role was taking mockups from the UI designer in Photoshop and converting that fully responsive HTML/CSS/JavaScript/jQuery inside the AngularJS app.
     <br><br>
-    A central tenant of technology is improving upon an existing market. When it comes to development media, there's a lot of improve upon. Coding can be difficult enough to learn on it's own, there's no need to prod viewers to tune out or fall asleep.
+    <i>Desktop Relationship View</i>
+    <img src="tagsumodashboard.jpg" style="width:100%">
     <br><br>
-    That's why I created WebRock, bridging a proficient background of filmmaking, with the essential points of web development: HTML, CSS, JavaScript, on a Stripe-integrated subscription service.
+    <i>Mobile Individual View</i><br>
+    <img src="tagsumomobile.jpg" style="border:1px solid gray">
     <br><br>
     </p>
     <br><br>
-    <br><br>
-    <p style="
-    width:150px;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    padding: 10px;
-    border: 5px solid navy;
-    text-decoration: underline;
-    border-radius: 45px;
-    background:black;
-    text-decoration: none;"><a href="index.html#blog" style="color:white; text-decoration: none;">More Articles</a></p>
+    <p id="morebutton"><a href="index.html#blog" style="color:white; text-decoration: none;">More Articles</a></p><br>
     </div>
     </div>
 </html>
