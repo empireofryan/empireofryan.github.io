@@ -523,6 +523,29 @@ body {
 
 p {font-size: 1.2em;}
 
+#morebutton {
+    width:150px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    border: 5px solid navy;
+    text-decoration: underline;
+    border-radius: 45px;
+    background:black;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+#morebutton:hover {
+    background: #0099FF;
+}
+
 </style>
 
 
@@ -568,7 +591,7 @@ p {font-size: 1.2em;}
    <p id="logo" style="margin-top:-550px; margin-left:-50px; position:absolute; color:white; font-size:4em; font-family:futura">YEAR OF<br>CODING</p>
    <div id="bloginfo" style="height:50px; background-color:black;">
      <div id="blogline">
-       <a href="midnightrunning.html" id="previous" style="float:left; width:100px;">PREVIOUS</a>
+       <a href="indiefilm.html" id="previous" style="float:left; width:100px;">PREVIOUS</a>
        <div id="date" style="display:inline-block; margin: 0 auto; width:150px; color:white"></div>
        <a href="indiefilm.html" id="next" style="float:right; width:100px;">NEXT</a>
      </div>
@@ -577,7 +600,7 @@ p {font-size: 1.2em;}
     <div id="blogcontainer">
       <div id="inline" style="display:inline-block">
     <h1 style="font-style:italic; text-style:center; font-size:3em; font-family: 'Droid Serif'">A Year Of Coding; The Portable Productive Office
-    <span style="text-align:left; float:right; margin-top: 25px; font-size:.35em; font-style:normal">by Ryan Johnson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3179 views</span></h1></div>
+    <span style="text-align:left; float:right; margin-top: 25px; font-size:.35em; font-style:normal">by Ryan Johnson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 317 views</span></h1></div>
     <br><br>
     <div id="bodytext" style="padding-left:50px; padding-right:50px">
     <p>May I confide in you for a moment? There was a time when I struggled to do something as simple as play a video on the background of a website. I remember struggling for days to do such a (now) rudimentary task that would presently take me under 5 minutes. Ah, the joys of progression.
@@ -596,15 +619,7 @@ p {font-size: 1.2em;}
     The future can be succictly summed up:</p>
     <h2>Learn to program, or be programmed by those who do.</h2>
     <br><br>
-    <p style="
-    width:150px;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    padding: 10px;
-    border: 5px solid navy;
-    text-decoration: underline;
-    border-radius: 45px"><a href="index.html#blog">More Articles</a></p>
+    <p id="morebutton"><a href="index.html#blog" style="color:white; text-decoration: none;">More Articles</a></p><br>
     </div>
     </div>
 </html>

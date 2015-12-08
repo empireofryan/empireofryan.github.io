@@ -482,6 +482,7 @@ body {
 }
 
 #background {
+  margin-top:80px;
   background-image:url(goodkarmaclub.jpg);
   height:90vh;
   background-size:cover;
@@ -523,6 +524,31 @@ body {
 
 p {font-size: 1.2em;}
 
+
+#morebutton {
+    width:150px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    border: 5px solid navy;
+    text-decoration: underline;
+    border-radius: 45px;
+    background:black;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+#morebutton:hover {
+    background: #0099FF;
+}
+
+
 </style>
 
 
@@ -546,7 +572,7 @@ p {font-size: 1.2em;}
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">RJ<img src="profile_small.jpg" class="img-circle" style="width: 60%; margin-top: -39px;"></a>
+            <a class="navbar-brand" href="index.html">RJ<img src="profile_small.jpg" class="img-circle" style="width: 60%; margin-top: -39px;"></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -568,38 +594,39 @@ p {font-size: 1.2em;}
    <p id="logo" style="margin-top:-550px; margin-left:-50px; position:absolute; color:white; font-size:4em; font-family:futura">DIRECTING AN INDIE FILM:<br>A RETROSPECTIVE</p>
    <div id="bloginfo" style="height:50px; background-color:black;">
      <div id="blogline">
-       <a href="midnightrunning.html" id="previous" style="float:left; width:100px;">PREVIOUS</a>
+       <a href="yearcoding.html" id="previous" style="float:left; width:100px;">PREVIOUS</a>
        <div id="date" style="display:inline-block; margin: 0 auto; width:150px; color:white"></div>
-       <a href="indiefilm.html" id="next" style="float:right; width:100px;">NEXT</a>
+       <a href="yearcoding.html" id="next" style="float:right; width:100px;">NEXT</a>
      </div>
    </div>
   <body>
     <div id="blogcontainer">
       <div id="inline" style="display:inline-block">
-    <h1 style="font-style:italic; text-style:center; font-size:3em; font-family: 'Droid Serif'">Directing an Indie Film: A Retrospective
-    <span style="text-align:left; float:right; margin-top: 25px; font-size:.35em; font-style:normal">by Ryan Johnson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5239 views</span></h1></div>
-    <br><br>
+    <h1 style="font-style:italic; text-style:center; font-size:3em; font-family: 'Droid Serif'"><a href="https://www.youtube.com/watch?v=C22ufOqDyaE">Good Karma Club</a>
+    <span style="text-align:left; float:right; margin-top: 25px; font-size:.35em; font-style:normal"><!-- by Ryan Johnson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 423 views --></span></h1></div>
+
     <div id="bodytext" style="padding-left:50px; padding-right:50px">
     <p>
+    
+    Good Karma Club is about the dream to better oneself and the world entire. When we make a change for the better, there's a number of obstacles that must be overcome - our past habits, misdeeds. Our protagonist, Graham, struggles with his flaws when he wrangles together a group of friends to help him open a restaurant.
     <br><br>
-    Making a film is the closest one will ever come to the ubiquitious dream of standing in front of a classroom and realizing you're not wearing any clothes. All eyes will be on you mercilessly, and any imperfection will be unforgiven. It's as if the viewer owes you something, 'this is my precious free time, you better entertain me, damn it!'
+    Writing and directing Good Karma Club was simultaneously the most enjoyable, stressful, exhilerating experience of my life. Together for 13 nights, the cast, crew, and I slept under the same roof, shooting for sometimes over 12 hours a day. 
     <br><br>
-    <br>
-    <br><br>
+    There is no better method to master filmmaking than to plain and simple make a film. Theory and strategy can only go so far, eventually the time comes to put ideas to execution. I learned more during two weeks of shooting than years of studying production.
+    <!-- Making a film is the closest one will ever come to the ubiquitious dream of standing in front of a classroom and realizing you're not wearing any clothes. All eyes will be on you mercilessly, and any imperfection will be unforgiven. It's as if the viewer owes you something, 'this is my precious free time, you better entertain me, damn it!' -->
+    <!-- Being said, filmmaking is also the ultimate art. A mixture of moving images, audio, and storytelling.  -->
+        <br><br>
+        <a href="https://www.youtube.com/watch?v=C22ufOqDyaE">Click to watch the trailer
     </p>
+
+
+    <div>
+      <video class="bg_video" style="width:650px; border-radius:45px" autoplay loop muted>
+        <source src="GKCSample.mp4" type="video/mp4">
+      </video>
+    </div>
     <br><br>
-    The future can be succictly summed up:</p>
-    <h2>Learn to program, or be programmed by those who do.</h2>
-    <br><br>
-    <p style="
-    width:150px;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    padding: 10px;
-    border: 5px solid navy;
-    text-decoration: underline;
-    border-radius: 45px"><a href="index.html#blog">More Articles</a></p>
+    <p id="morebutton"><a href="index.html" style="color:white; text-decoration: none;">More Articles</a></p><br>
     </div>
     </div>
 </html>
