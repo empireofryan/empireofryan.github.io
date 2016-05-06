@@ -1,0 +1,781 @@
+
+ <script src="http:////cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<script src="jquery.dotdotdot.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+    overflow-x:hidden;
+}
+
+header {
+  height: 0px;
+  padding-top: 0px;
+  background: #f07057;
+  margin-top:0px;
+  margin-bottom:0px;
+  position:fixed;
+}
+@font-face {
+    font-family: handwriting;
+    src: url(comesinhandy.ttf);
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(gotham.ttf);
+}
+.handwriting {
+    font-family: handwriting;
+}
+.main-nav,
+.main {
+  position: relative; 
+}
+.main-nav {
+  background: #0099FF;
+  top:0px;
+  height: 80px;
+  z-index: 999999999;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  position:fixed;
+  width:100%;
+  opacity:.8;
+      -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+.main-nav p, .main-nav a {
+  -webkit-text-stroke: .5px black;
+  color:white;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: -100px;
+  z-index:99999999;
+}
+.main {
+  background: #f2f2e8;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px;
+}
+.main-nav a, .main-nav p {
+    padding-top:10px;
+    font-size: 1.7em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    margin: 24px 12px;
+    font-weight: bold;
+    padding-left:10%;
+    padding-right:10%;
+    margin-top:15px;
+}
+.main2 {
+ /* background: #f2f2e8;*/
+  padding: 1px 50px 0px;
+  column-count: 2;
+  column-gap: 40px;
+  position:relative;
+}
+
+header {
+    color: #f7f8ee;
+}
+header, .main-nav {
+    text-align: center;
+}
+.main {
+    background: #f2f2e8;
+    padding: 110px 50px 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+}
+.main {
+    position: relative;
+}
+.footer_cont {
+  width:130%;
+   text-align: center;
+   bottom:0px;
+   padding:0px;
+   margin-bottom: -20px;
+   margin-left:-15%;
+}
+
+.fe_video {
+    width:100%;
+}
+.name_parent {
+  width:100%; position:relative;
+}
+.name_header {
+  font-family: Gotham;
+    position: absolute;
+    color: white;
+    z-index: 9999999;
+    margin-top: -34%;
+    margin-left: 30%;
+    left:0;
+    right:0;
+    border: 4px solid white;
+    padding:10px;
+    width:37%;
+ /*   margin-left:auto;
+    margin-right:auto;*/
+    font-size: 4em;
+          -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+.blog_title {
+  font-size:1.5vw;
+  height:30px;
+  width:100%;
+  text-align: center;
+}
+.box {
+  width:300px; height:200px; background-color:black; left:0; right:0; margin-left:auto; margin-right:auto;
+}
+div.figure {
+  float: center;
+/*  border: thin silver solid;*/
+  margin: 0.5em;
+  padding: 0.5em;
+}
+div.figure p {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1vw;
+  text-indent: 0;
+}
+img.scaled {
+  width: 100%;
+  border-radius: 40px;
+}
+
+#containersoon{
+    width: 500px;
+    height: 200px;
+    background: #CCC;
+    position: relative;
+    cursor: pointer;
+}
+
+#popUpText
+{
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;    
+}
+
+#popUp{
+    display: none;
+    right: 20px;
+    position: absolute;
+    bottom: -32px;
+    right: -2px;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid green;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.grid {background-color:maroon;  width:100% !important;
+  opacity:1;
+      -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;}
+.grid-item { width: 100%; border:1px solid black; border-radius: 45px; margin:0px; margin-left:0px; margin-top:10px; }
+#image1 { background: url(http://akamaicovers.oreilly.com/images/9781593272869/cat.gif) no-repeat; width:100px; height:140px; border:none; background-size:100%;}
+#image2 { background: url(http://blogs.cuit.columbia.edu/rvlab/files/2012/11/nyc-skyline.jpg) no-repeat; background-size: 100%; width:150px; height:80px;}
+#image3 { background: url(creative.png) no-repeat; width:140px; height:60px; background-size: 100%;}
+#image4 { background: url(developer.png) no-repeat; background-size: 100%; width:200px; height:100px;}
+#image4:hover { background: url(creative.png) no-repeat; width:200px; height:100px;}
+#image5 { background: url(https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/791px-Ruby_on_Rails.svg.png) no-repeat; width:100px; height:120px; background-size: 92%; border:none;}
+#image6 { background: url(http://alteredegosalon.com/wp-content/uploads/2013/04/hot-side-profile-239x230.png) no-repeat; width:160px; height:150px; background-size: 100%; }
+#image7 { background: url(http://jscoderetreat.com/img/why-js.png) no-repeat; width:120px; height:150px; background-size: 92%; border:none; }
+#image8 { background: url(coffee.png) no-repeat; width:100px; height:100px; background-size: 100%; border:none; }
+#image9 { background: url(wm.jpg) no-repeat; width:140px; height:140px; background-size: 100%; }
+#image10 { background: url(frontend.jpg) no-repeat; width:180px; height:100px; background-size: 100%; border-radius: 190px; border:gray;}
+#image11 { background: url(california.jpg) no-repeat; width:90px; height:50px; background-size: 100%; border:3px solid skyblue;}
+#image121 { background: url(ryan.png) no-repeat; width:280px; height:300px; background-size: 100%; border:none; border-radius: 0px; position:absolute; left:40px; top:66px; }
+#image13 { background: url(sublime.png) no-repeat; width:80px; height:60px; background-size: 60%; border-radius:0px; border:none; }
+
+.grid-item--width2 { width: 400px; }
+.grid-item2 {  height: 300px; width: 600px; }
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+#tooltip {
+  border:4px solid black;
+  position: absolute;
+  left:250px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 3s;
+}
+
+
+.step {
+
+  border:none;
+  background-color:#eee;
+}
+.step:hover {
+  border:solid #CCC 1px;
+  background-color:#fff;
+}
+
+.step_details {display:none;}
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: url(underwater.jpg) no-repeat;
+  /* center */
+  margin: 0 auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 180px;
+  height: 120px;
+  float: left;
+  background: none;
+  border: 5px solid white;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+  background-size:100%;
+}
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+
+  .grid-item img {
+    width:100%; height:100%; display:block;
+  }
+
+  .navbar-default .navbar-nav>li>a {
+      color: white;
+  }
+
+  @media only screen and (max-width: 480px) {
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border-color: #e7e7e7;
+      background-color: black;
+  }
+  }
+/*
+  .gem:hover {
+    background: url("gemon.png");
+  }*/
+
+.gem { background: url(gems.png) no-repeat; background-size: 100%; }
+.gem:hover { background: url(gemon.png) no-repeat; }
+
+.whatend { background: url(frontendcar.png) no-repeat; background-size: 100%; }
+.whatend:hover { background: url(backend.png) no-repeat; }
+
+
+/* INTRO HEADER STYLING */
+
+.block-center-v {
+    position: absolute;
+
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+html, body, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+div {
+    display: block;
+}
+
+.tk-museo-sans, body {
+    font-family: "museo-sans",sans-serif;
+}
+
+@media (min-width:168px) {
+body {
+    font-size: 1.14285714rem;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+}
+
+@media (min-width: 168px) {
+.grid {
+    margin-left: -28px;
+    margin-right: -50px;
+}
+}
+
+.grid:before {
+    content: "";
+    display: table;
+    width: 100%;
+    height: 0;
+    clear: both;
+}
+
+
+
+@media (min-width: 467px) {
+  .grid .col.col-two-thirds {
+      width: 150.666666%;
+  }
+
+  .grid .col {
+      float: left;
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+}
+
+@media (max-width: 467px) {
+  .grid .col.col-two-thirds {
+      width: 100%;
+  }
+
+  .grid .col {
+      float: left;
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+}
+
+
+.grid .col {
+    box-sizing: border-box;
+}
+
+@media (min-width: 168px) {
+  .section-intro-lg .section-intro-title {
+      font-size: 5.5714rem;
+      margin-top:340px;
+      color:white;
+      margin-left:50px;
+  }
+}
+
+
+
+  .section-intro-title {
+     
+      margin-top:-198px;
+  }
+
+
+
+.section-intro-title {
+    font-size: 2.57142857rem;
+    line-height: 1.15;
+    letter-spacing: -.05em;
+    margin: 0;
+    font-family:Futura;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media (min-width: 168px) 
+  .section-intro-subtitle {
+      font-size: 1.28571429rem;
+      color:white;
+  }
+}
+
+.section-intro-subtitle {
+    font-size: 1.28571429rem;
+    font-weight: 100;
+    color: white;
+    margin: 1em 0 0 0;
+
+}
+
+.img-circle {
+    margin-top: -51px;
+    margin-left: 9px;
+    width: 69%;
+}
+
+
+
+@media only screen and (min-width:100px) and (max-width: 567px){
+  .grid .col.col-two-thirds {
+       width: 115%; 
+  }
+  .figure {
+    display:none;
+  }
+  .section-intro-title, .section-intro-subtitle {
+    text-align:center;
+    color:white;
+  }
+  .navbar-toggle {
+    margin-top:20px;
+  }
+  .navbar-brand {
+    padding-left:-40px;
+  }
+  .navbar-nav {
+    background-color:black;
+    margin-top:-10px;
+  }
+  .navbar-collapse {
+    margin-top:-10px;
+  }
+}
+
+a, a:hover {
+  color:inherit;
+  text-decoration: none;
+}
+
+#background {
+  margin-top:80px;
+  background-image:url(flyingrock.jpg);
+  height:80vh;
+  background-size:cover;
+  background-position:center;
+  margin-bottom:-270px;
+}
+
+/*#background2 {
+  margin-top:-40px;
+  background-image:url(MetalBig.jpg);
+  height:120vh;
+  background-size:cover;
+  background-position:center;
+  margin-bottom:-270px;
+}*/
+
+#gradient
+{
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
+}
+</style>
+
+
+
+<nav class="navbar navbar-default main-nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">RJ<img src="profile_small.jpg" class="img-circle" style="width: 60%; margin-top: -39px;"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="http://www.github.com/empireofryan">GitHub</a></li>
+        <li><a href="https://angel.co/ryan-johnson-33">Resume</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="mailto:rjohnson2001@gmail.com">Contact</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+   
+<div id="background">
+<div class="section-intro section-intro-lg block-center-v">
+  <div class="grid">
+    <div class="col col-two-thirds">
+      <h1 class="section-intro-title animated fadeIn">Me.</h1>
+        <p class="section-intro-subtitle" style="margin-top:10px; font-family:Futura; color:white; margin-left:50px">
+          I'm a Front-End/Ruby/Rails dev with an extensive background in media production.
+        </p>
+        <p id="blog" class="section-intro-subtitle" style="font-family:futura; color:white; margin-left:50px">
+          Below, you'll find a stream of constantly updated work.
+        </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<section  style="margin-top:305px">
+  <div id='gradient'>
+  <table>
+  <h2 style='text-align:center; font-size:5em; font-family:handwriting;'>BLOG</h2>
+  <div class="col-md-4 containersoon">
+    <a href="midnightrunning.html">
+    <div class="figure">
+      <h1 class="blog_title">Midnight Running</h1>
+            <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="running.mp4" type="video/mp4">
+               
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+      <p class="ellipsis">During nocturnal hours, as curtains are drawn and streetlamps illuminate empty blocks, the ambitious hit pavement.<br>The idyllic combination of warm nights, near-empty streets, and Balboa Park lit with colored spotlights provide an uncompromising excuse to lace up a pair of running shoes under the glow of the moon... </p>
+    </div>
+    </a>
+    </div>
+  <div class="col-md-4 containersoon">
+    <a href="yearcoding.html">
+    <div class="figure">
+      <h1 class="blog_title">A Year of Coding</h1>
+            <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="sublimetext.mov" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+      <p style=" width:100%">Coding is a journey like mastering a musical instrument, foreign language, or physical sport. Progress comes in small increments - from confidence riding the bunny slopes of HTML & CSS to building up the gravitas to juggle Ruby, Rails, Sinatra, and Swift apps in a single day.</p>
+    </div>
+    </a>
+    </div>
+  <div class="col-md-4 containersoon">
+    <a href="indiefilm.html">
+    <div class="figure">
+      <h1 class="blog_title">Directing an Indie Film: Retrospective</h1>
+       <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="GKCSample.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+      <p>Common advice states you never learn from the attempts you don't make. <b>Feature films are costly, immensely time-consuming endeavours.</b> Here's my best advice for fellow filmmakers to maximize production for budget:<br>1. Use what you have: Locations. Cameras. Props.<br> 2. Maintain focus on the next project: Don't put all you're eggs into one 'magnum opus' - learn from each and know when it's time to start anew... </p>
+    </div>
+    </div>
+</div>
+</a>
+</div>
+</section>
+
+<section>
+<div class="">
+  <div class="">
+      <h2 class="containersoon" style='text-align:center; font-size:5em; font-family:handwriting;'>PROJECTS</h2>
+  </div>
+  <div class="col-md-4">
+    <a href="webrock.html">
+    <div  id="projects" class="figure">
+      <h1 class="blog_title">WebRock</h1>
+        <div>
+          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+            <source src="webrock.mp4" type="video/mp4">
+          </video>
+        </div>
+      <p style="">
+      <p style="overflow:hidden; width:100%">Founder and lead instructor of a web development video series explaining the basics of coding.</p>
+    </div>
+   </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="tagsumo.html">
+    <div class="figure">
+      <h1 class="blog_title">tagSumo / Apollo / VorVision</h1>
+        <div>
+          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+            <source src="codeycode.mov" type="video/mp4">
+          </video>
+        </div>
+      <p style="">
+      <p style="overflow:hidden; width:100%">Lead front-end design and development on Rails and Angular apps for California-based tech startup.</p>
+    </div>
+   </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="railsapps.html">
+    <div class="figure">
+      <h1 class="blog_title" id="tt">Rails Apps</h1>
+        <div class="">
+          <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+            <source src="rails3.mov" type="video/mp4">
+          </video>
+        </div>
+      <p style="">
+      <p>Rails projects include a Stripe-integrated app, a podcast network, clones of Twitter & Pinterest.</p>
+    </div>
+  </div>
+ </a>
+</div>
+</section>
+
+<!-- FOOTER APPEAR WHEN REACH PAGE BOTTOM -->
+<section>
+  <footer class="footer" style="margin:0 0 -30px">
+    <div class="">
+      <p class="text-muted" style="text-align: center; margin: 365px 0px 0px 0px; background-color:black; height:30px; padding: 5px"><3 NYC</p>
+    </div>
+  </footer>
+</section>
+
+<script>
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+</script>
+
+<script>
+$('#tt').click(function() {
+    $('#tt').tooltip({ items: "#tt", content: "Displaying on click"});
+    $('#tt').tooltip("open");
+});            
+</script>
+
+<script>
+$('#yourLink').click(function(){
+  $('#tooltip').toggle();
+});
+</script>
+
+<script>
+$('.step').hover(function() { // mouse enter
+
+  $(this).animate({
+      'margin-right': '-150px'
+  }, 500).children('.step_details').fadeIn(700);
+
+}, function() { // mouse leave
+
+  $(this).animate({
+    'margin-right': '0px'
+  }, 200).children('.step_details').fadeOut(200);
+
+});
+
+</script>
+
+<script>
+$('.grid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: 180,
+  isFitWidth: true
+});
+</script>
+
+
+<script>
+// $(document).ready(function() {
+//   $(".ellipsis").dotdotdot();
+//   height    : null,
+// });
+</script>
+
+
+<script>
+// var  mn = $(".main-nav");
+//     mns = "main-nav-scrolled";
+//     hdr = $('header').height();
+
+// $(window).scroll(function() {
+//   if( $(this).scrollTop() > hdr ) {
+//     mn.addClass(mns);
+//   } else {
+//     mn.removeClass(mns);
+//   }
+// });
+// </script>
+
+<script>
+
+</script>

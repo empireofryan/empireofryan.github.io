@@ -1,0 +1,612 @@
+
+ <script src="http:////cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<script src="jquery.dotdotdot.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+    overflow-x:hidden;
+}
+
+header {
+  height: 0px;
+  padding-top: 0px;
+  background: #f07057;
+  margin-top:0px;
+  margin-bottom:0px;
+  position:fixed;
+}
+@font-face {
+    font-family: handwriting;
+    src: url(comesinhandy.ttf);
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(gotham.ttf);
+}
+.handwriting {
+    font-family: handwriting;
+}
+.main-nav,
+.main {
+  position: relative; 
+}
+.main-nav {
+  background: #0099FF;
+  top:0px;
+  height: 80px;
+  z-index: 999999999;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  position:fixed;
+  width:100%;
+  opacity:.8;
+      -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+.main-nav p, .main-nav a {
+  -webkit-text-stroke: .5px black;
+  color:white;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: -100px;
+  z-index:99999999;
+}
+.main {
+  background: #f2f2e8;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px;
+}
+.main-nav a, .main-nav p {
+    padding-top:10px;
+    font-size: 1.7em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    margin: 24px 12px;
+    font-weight: bold;
+    padding-left:10%;
+    padding-right:10%;
+    margin-top:15px;
+}
+.main2 {
+ /* background: #f2f2e8;*/
+  padding: 1px 50px 0px;
+  column-count: 2;
+  column-gap: 40px;
+  position:relative;
+}
+
+header {
+    color: #f7f8ee;
+}
+header, .main-nav {
+    text-align: center;
+}
+.main {
+    background: #f2f2e8;
+    padding: 110px 50px 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+}
+.main {
+    position: relative;
+}
+.footer_cont {
+  width:130%;
+   text-align: center;
+   bottom:0px;
+   padding:0px;
+   margin-bottom: -20px;
+   margin-left:-15%;
+}
+
+.fe_video {
+    width:100%;
+}
+.name_parent {
+  width:100%; position:relative;
+}
+.name_header {
+  font-family: Gotham;
+    position: absolute;
+    color: white;
+    z-index: 9999999;
+    margin-top: -34%;
+    margin-left: 30%;
+    left:0;
+    right:0;
+    border: 4px solid white;
+    padding:10px;
+    width:37%;
+ /*   margin-left:auto;
+    margin-right:auto;*/
+    font-size: 4em;
+          -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+.blog_title {
+  font-size:1.5vw;
+  height:30px;
+  width:100%;
+  text-align: center;
+}
+.box {
+  width:300px; height:200px; background-color:black; left:0; right:0; margin-left:auto; margin-right:auto;
+}
+div.figure {
+  float: center;
+/*  border: thin silver solid;*/
+  margin: 0.5em;
+  padding: 0.5em;
+}
+div.figure p {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1vw;
+  text-indent: 0;
+}
+img.scaled {
+  width: 100%;
+  border-radius: 40px;
+}
+
+#containersoon{
+    width: 500px;
+    height: 200px;
+    background: #CCC;
+    position: relative;
+    cursor: pointer;
+}
+
+#popUpText
+{
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;    
+}
+
+#popUp{
+    display: none;
+    right: 20px;
+    position: absolute;
+    bottom: -32px;
+    right: -2px;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid green;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.grid {background-color:maroon;  width:100% !important;
+  opacity:1;
+      -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;}
+.grid-item { width: 100%; border:1px solid black; border-radius: 45px; margin:0px; margin-left:0px; margin-top:10px; }
+#image1 { background: url(http://akamaicovers.oreilly.com/images/9781593272869/cat.gif) no-repeat; width:100px; height:140px; border:none; background-size:100%;}
+#image2 { background: url(http://blogs.cuit.columbia.edu/rvlab/files/2012/11/nyc-skyline.jpg) no-repeat; background-size: 100%; width:150px; height:80px;}
+#image3 { background: url(creative.png) no-repeat; width:140px; height:60px; background-size: 100%;}
+#image4 { background: url(developer.png) no-repeat; background-size: 100%; width:200px; height:100px;}
+#image4:hover { background: url(creative.png) no-repeat; width:200px; height:100px;}
+#image5 { background: url(https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/791px-Ruby_on_Rails.svg.png) no-repeat; width:100px; height:120px; background-size: 92%; border:none;}
+#image6 { background: url(http://alteredegosalon.com/wp-content/uploads/2013/04/hot-side-profile-239x230.png) no-repeat; width:160px; height:150px; background-size: 100%; }
+#image7 { background: url(http://jscoderetreat.com/img/why-js.png) no-repeat; width:120px; height:150px; background-size: 92%; border:none; }
+#image8 { background: url(coffee.png) no-repeat; width:100px; height:100px; background-size: 100%; border:none; }
+#image9 { background: url(wm.jpg) no-repeat; width:140px; height:140px; background-size: 100%; }
+#image10 { background: url(frontend.jpg) no-repeat; width:180px; height:100px; background-size: 100%; border-radius: 190px; border:gray;}
+#image11 { background: url(california.jpg) no-repeat; width:90px; height:50px; background-size: 100%; border:3px solid skyblue;}
+#image121 { background: url(ryan.png) no-repeat; width:280px; height:300px; background-size: 100%; border:none; border-radius: 0px; position:absolute; left:40px; top:66px; }
+#image13 { background: url(sublime.png) no-repeat; width:80px; height:60px; background-size: 60%; border-radius:0px; border:none; }
+
+.grid-item--width2 { width: 400px; }
+.grid-item2 {  height: 300px; width: 600px; }
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+#tooltip {
+  border:4px solid black;
+  position: absolute;
+  left:250px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 3s;
+}
+
+
+.step {
+
+  border:none;
+  background-color:#eee;
+}
+.step:hover {
+  border:solid #CCC 1px;
+  background-color:#fff;
+}
+
+.step_details {display:none;}
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: url(underwater.jpg) no-repeat;
+  /* center */
+  margin: 0 auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 180px;
+  height: 120px;
+  float: left;
+  background: none;
+  border: 5px solid white;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+  background-size:100%;
+}
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+
+  .grid-item img {
+    width:100%; height:100%; display:block;
+  }
+
+  .navbar-default .navbar-nav>li>a {
+      color: white;
+  }
+
+  @media only screen and (max-width: 480px) {
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border-color: #e7e7e7;
+      background-color: black;
+  }
+  }
+/*
+  .gem:hover {
+    background: url("gemon.png");
+  }*/
+
+  .gem { background: url(gems.png) no-repeat; background-size: 100%; }
+.gem:hover { background: url(gemon.png) no-repeat; }
+
+.whatend { background: url(frontendcar.png) no-repeat; background-size: 100%; }
+.whatend:hover { background: url(backend.png) no-repeat; }
+</style>
+
+
+
+<!-- <header>
+   <nav class="main-nav"> 
+    <a href="#">BLOG</a>
+    <a href="#">PROJECTS</a>
+    <a href="#">CONTACT</a>
+   </nav> 
+</header> -->
+
+<nav class="navbar navbar-default main-nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">RJ</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+   
+<div class="grid" style="margin-top:80px; width:100%">
+<!--   <div class="" id="image121"></div>
+  <div class="grid-item" id="image11"></div>
+  <div class="grid-item" id="image1"></div>
+  <div class="grid-item" id="image5"></div>
+  <div class="grid-item" id="image2"></div>
+  <div class="grid-item" id="image13"></div>
+  <div class="grid-item" id="image3"></div>
+  <div class="grid-item" id="image4"></div>
+  <div class="grid-item" id="image6"></div>
+  <div class="grid-item" id="image7"></div>
+  <div class="grid-item" id="image8"></div>
+  <div class="grid-item" id="image9"></div>
+  <div class="grid-item" id="image10"></div> -->
+   <!-- <div class="grid-item" style="background: url(frontend.jpg) no-repeat; background-size:100%"></div> -->
+  <!--  <div class="grid-item grid-item--height2" style="background: url(http://blogs.cuit.columbia.edu/rvlab/files/2012/11/nyc-skyline.jpg) no-repeat; background-size: 250%;"></div> -->
+  <div class="grid-item grid-item--height2" style="background: url(ryanh200.png) no-repeat; background-size: 100%;"></div>
+   <div class="grid-item grid-item--height3" style="border-radius:45px">
+      <img src="ryangrid3.png" onerror="$(this).hide();" alt="" style="border-radius:45px">
+   </div>
+   <div class="grid-item grid-item--height2 gem">
+     <!--  <img src="gems.png" onerror="$(this).hide();" alt="" class="gem"> -->
+   </div>
+   <div class="grid-item" style="background: url(creative.png) no-repeat; background-size:100%; border:none" ></div>
+   <div class="grid-item" style="background: url(http://alteredegosalon.com/wp-content/uploads/2013/04/hot-side-profile-239x230.png) no-repeat;"></div>
+   <div class="grid-item" style="background: url(http://jscoderetreat.com/img/why-js.png")>
+      <img src="http://jscoderetreat.com/img/why-js.png" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item grid-item--height2">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/791px-Ruby_on_Rails.svg.png">
+   </div>
+   <div class="grid-item grid-item--height3">
+    <img src="manjushri.png">
+   </div>
+   <div class="grid-item" style="background: url(developer.png) no-repeat; background-size:103%"></div>
+   <div class="grid-item grid-item--height2 whatend">
+    <!-- <img src="http://40.media.tumblr.com/fe715a194ae5acd67ed5ea531043b851/tumblr_nugztif8Ae1ug7bkvo1_500.png" onerror="$(this).hide();" alt=""> -->
+   </div>
+<!--    <div class="grid-item">
+      <img src="wm.jpg" onerror="$(this).hide();" alt="">
+   </div> -->
+   <div class="grid-item grid-item--height2">
+      <img src="california.jpg" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item">
+      <img src="rwd.png" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item">
+      <img src="salesgit.png" onerror="$(this).hide();" alt="">
+   </div>
+   <!-- <div class="grid-item grid-item--height2"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item grid-item--height3">
+    <img src="buddhagrid3.png" onerror="$(this).hide();" alt="">
+   </div>
+   <div class="grid-item grid-item--height2"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item"></div>
+   <div class="grid-item grid-item--height2"></div> -->
+
+
+</div>
+
+<section>
+  <table>
+  <h2 style='text-align:center; font-size:5em; font-family:handwriting;'>BLOG</h2>
+  <div class="col-md-4 containersoon">
+    <div class="figure">
+      <h1 class="blog_title">Midnight Running</h1>
+            <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="running.mp4" type="video/mp4">
+               
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+      <p class="ellipsis">During nocturnal hours, as curtains are drawn and streetlamps illuminate empty blocks, the ambitious hit pavement.<br>The idyllic combination of warm nights, near-empty streets, and Balboa Park lit with colored spotlights provide an uncompromising excuse to lace up a pair of running shoes under the glow of the moon... </p>
+    </div>
+    </div>
+  <div class="col-md-4 containersoon">
+    <div class="figure">
+      <h1 class="blog_title">A Year of Coding</h1>
+            <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="sublimetext.mov" type="video/mp4">
+               
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+      <p style=" width:100%">Approximately one year ago, I came across a support query to my hosting provider titled, "Background Video Won't Work". A simple full-width background video loop with a heading overlay was the end goal. The days when 'stacks' invoked Sunday morning pancakes rather than Ruby on Rails, JavaScript, Angular, Python, PHP... </p>
+    </div>
+    </div>
+  <div class="col-md-4 containersoon">
+    <div class="figure">
+      <h1 class="blog_title">Directing an Indie Film: Retrospective</h1>
+      <img class="box scaled" src="http://share.gifyoutube.com/Kd0rQX.gif"
+          alt="St. Tropez" style="">
+      <p>Common advice states you never learn from the attempts you don't make. <b>Feature films are costly, immensely time-consuming endeavours.</b> Here's my best advice for fellow filmmakers to maximize production for budget:<br>1. Use what you have: Locations. Cameras. Props.<br> 2. Maintain focus on the next project: Don't put all you're eggs into one 'magnum opus' - learn from each and know when it's time to start anew... </p>
+    </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container containersoon">
+  <div class="main2 containersoon">
+      <h2 class="containersoon" style='text-align:center; font-size:5em; font-family:handwriting;'>PROJECTS</h2>
+  </div>
+  <div class="col-md-4">
+    <div class="figure">
+      <h1 class="blog_title">WebRock</h1>
+      <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="webrock.mp4" type="video/mp4">
+               
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+<!--       <img class="box scaled" src="runningninja.png"
+          alt="" style=""> -->
+      <p class="ellipsis"></p>
+    </div>
+    </div>
+
+   <div id="tooltip" style="display:none; transition: opacity 1s ease-out;">Coming Soon</div>
+
+  <!--  <div id="yourLink">Click here to show the tooltip!</div>
+
+   <div class="step">
+     <h3>Step So and So</h3>
+     <p class="step_details">do such and such</p>
+   </div> -->
+
+  <div class="col-md-4" id="myTooltip" title="Coming Soon">
+    <div>
+      <h1 class="blog_title" id="myTooltip" title="Coming Soon">tagSumo / Apollo / VorVision</h1>
+                  <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="codeycode.mov" type="video/mp4">
+               
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+      <p style="">
+      <p style="overflow:hidden; width:100%">Work experience from California-based tech companies & starups. Led front-end design and development for Rails and Angular apps. </p>
+    </div>
+    </div>
+  <div class="col-md-4">
+    <div class="figure">
+      <h1 class="blog_title" id="tt">Rails Apps</h1>
+                  <div class="">
+                    <video class="bg_video" style="width:350px; border-radius:45px" autoplay loop muted>
+                      <source src="rails3.mov" type="video/mp4">
+               
+                      Your browser does not support the video tag.
+                    </video>
+      </div>
+      <p>Challenges include clones of Twitter & Pinterest.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER APPEAR WHEN REACH PAGE BOTTOM -->
+    <footer class="footer" style="margin-left:auto; margin-right:auto">
+
+        <p class="text-muted" style="text-align:center; background-color:black; margin-left:auto; margin-right:auto; padding: 5px; font-style: italic; margin-bottom:-20px; height:30px">Fin</p>
+
+    </footer>
+
+<script>
+$('#tt').click(function() {
+    $('#tt').tooltip({ items: "#tt", content: "Displaying on click"});
+    $('#tt').tooltip("open");
+});            
+</script>
+
+<script>
+$('#yourLink').click(function(){
+  $('#tooltip').toggle();
+});
+</script>
+
+<script>
+$('.step').hover(function() { // mouse enter
+
+  $(this).animate({
+      'margin-right': '-150px'
+  }, 500).children('.step_details').fadeIn(700);
+
+}, function() { // mouse leave
+
+  $(this).animate({
+    'margin-right': '0px'
+  }, 200).children('.step_details').fadeOut(200);
+
+});
+
+</script>
+
+<script>
+$('.grid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: 180,
+  isFitWidth: true
+});
+</script>
+
+
+<script>
+// $(document).ready(function() {
+//   $(".ellipsis").dotdotdot();
+//   height    : null,
+// });
+</script>
+
+
+<script>
+// var  mn = $(".main-nav");
+//     mns = "main-nav-scrolled";
+//     hdr = $('header').height();
+
+// $(window).scroll(function() {
+//   if( $(this).scrollTop() > hdr ) {
+//     mn.addClass(mns);
+//   } else {
+//     mn.removeClass(mns);
+//   }
+// });
+// </script>

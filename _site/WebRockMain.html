@@ -1,0 +1,1479 @@
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+<script scr="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+<script src="https://cdn.rawgit.com/sebastianekstrom/header-video/master/js/script.js"></script>
+<script src="https://cdn.rawgit.com/davatron5000/FitText.js/master/jquery.fittext.js"></script>
+<script src="fittext.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></style>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .header-video {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-video iframe,
+.header-video video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-video iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.header-video video {
+  width: 100%;
+}
+
+.header-video__teaser-video {
+  width: 100%;
+  height: auto; 
+}
+
+.header-video__media {
+  width: 100%;
+  height: auto;
+}
+    </style>
+
+    <style>
+/*
+
+Code snippet by maridlcrmn for Bootsnipp.com
+Follow me on Twitter @maridlcrmn
+*/
+
+.navbar-brand { position: relative; z-index: 2; }
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px 20px 10px 0px; transition: transform 0.3s; }
+
+.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background-color: #f8f8f8; }
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    background-color: rgb(111, 84, 153);
+    border-color: rgb(111, 84, 153);
+    color: rgb(255, 255, 255);
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px,-50px);
+}
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px,0px);
+}
+
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+    
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%,0px);
+    }
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px,0px);
+    }
+    
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px,-100%);
+    }
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px,0px);
+    }
+}
+
+.logo {
+  width:7%;
+  position:relative;
+  float:left;
+  z-index: 999999;
+}
+
+.navbar {
+  min-height: 62px;
+  margin-bottom:0px;
+}
+
+.bg_video {
+  width:100%;
+}
+
+.span4 {
+    width:300px;
+}
+
+.servContent .ico {
+    width: 55px;
+    text-align: center;
+    float: left;
+    margin-top: 5px;
+}
+
+.servDetil {
+    margin-left: 80px;
+}
+
+img {
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+.3col{
+    .make-md-column(3); /* Replaces .col-md-3; */
+    border: 1px solid #000;
+
+}
+
+.intro {
+/* background: url("images/zensand.jpg");
+ background-size: 1%;*/
+}
+
+.portfolio {
+  background-image: url("images/code.jpg");
+/*      height: 0;
+    border-width: 0 100vw 200px 0;
+    border-style: solid;
+    border-color: transparent transparent #4A9DF9 transparent;
+    z-index: 999999999;
+    margin-top:-150px;*/
+}
+
+.portfolio h2, span, p {
+  color:white;
+  text-align: center;
+}
+
+.titleHead {
+  text-align: center;
+}
+
+.fe_video {
+    width: 100%;
+}
+
+.fe_toolkit {
+    position: absolute; font-family: 'Chalkduster'; font-size:6em; margin-top:-52%; margin-left:6%; text-shadow: 7px 7px black; 
+  } 
+
+@media (min-width: 1250px) {
+  .fe_signup {
+  position: absolute;
+  border: 5px solid white;
+  padding: 25px;
+  text-align: center;
+  margin-left: 41%
+  } 
+
+
+  .fe_toolkit {
+    position: absolute; font-family: 'Chalkduster'; font-size:6em; margin-top:-600px; margin-left:6%; text-shadow: 7px 7px black;
+  } 
+
+  .fe_access {
+    position: absolute; font-family: 'futura'; font-size:2em; margin-top:-38%; margin-left:31%; text-shadow: 1px 1px black;
+  }
+
+  .fe_flip {
+    font-family: futura;font-size: 20px;top: 101px;left: 672px;width: 240px; margin-left:27px; color:#F0F0F0;
+  }
+  .fe_arrow {
+    position: absolute; width: 64%; margin-left: -55px; top: 19px;  -webkit-transform: rotate(100deg); transform: rotate(112deg);
+  }
+  .fe_switch {
+    margin-top: 26px; margin-left: 76px;
+  }
+}
+
+
+@media (min-width: 900px max-width: 1250px) {
+
+  .fe_signup {
+    position: absolute;
+    font-size: 1em;
+    border: 3px solid white;
+    padding: 15px;
+    text-align: center;
+    margin-left: -7%;
+    display: inline-block;
+  }
+
+  .fe_toolkit {
+    position: absolute;
+    font-family: 'Chalkduster';
+    font-size: 4em;
+    margin-top: -45%;
+    margin-left: -28%;
+    text-shadow: 7px 7px black;
+    display: inline-block;
+      } 
+
+  .fe_access {
+    position: absolute;
+    font-family: 'futura';
+    font-size: 1em;
+    margin-top: -33%;
+    margin-left: 34.5%;
+    text-shadow: 1px 1px black;
+  }
+
+  .fe_center  {
+      position: absolute;
+    font-family: 'futura';
+    margin-top: -13%;
+    margin-left: 36.8%;
+    text-shadow: 1px 1px black;
+  }
+
+  .fe_flip {
+    font-family: futura;font-size: 20px;top: 101px;left: 672px;width: 240px; margin-left:27px; color:#F0F0F0;
+  }
+  .fe_arrow {
+    position: absolute; width: 64%; margin-left: -55px; top: 19px;  -webkit-transform: rotate(100deg); transform: rotate(112deg);
+  }
+  .fe_switch {
+    margin-top: 26px; margin-left: 76px;
+  }
+}
+
+@media (max-width: 899px) {
+  .fe_signup {
+    position: absolute;
+    margin-top: -43%;
+    font-size: 1.2em;
+    border: 2px solid white;
+    padding: 6px;
+    text-align: center;
+    margin-left: -3%;
+    display: inline-block;
+  }
+
+  .fe_toolkit {
+    position: absolute;
+    font-family: 'Chalkduster';
+    font-size: 3em;
+    margin-top: -35%;
+    margin-left: -39%;
+    text-shadow: 7px 7px black;
+    display: inline-block;
+      } 
+
+  .fe_access {
+    position: absolute;
+    font-family: 'futura';
+    font-size: 1.2em;
+    margin-top: -24%;
+    margin-left: 31%;
+    text-shadow: 1px 1px black;
+  }
+
+  .fe_center  {
+    position: absolute;
+    font-family: 'futura';
+    font-size: 1em;
+    margin-top: -11%;
+    margin-left: 36.8%;
+    text-shadow: 1px 1px black;
+  }
+
+  .fe_flip {
+    font-family: 'futura';font-size: 12px;top: 101px;left: 672px;width: 240px; margin-left:27px; color:#F0F0F0;
+  }
+.fe_arrow {
+    position: absolute;
+    width: 49%;
+    margin-left: -34px;
+    top: 10px;
+    -webkit-transform: rotate(100deg);
+    transform: rotate(112deg);
+  }
+  .fe_switch {
+        margin-left: 54px;
+    margin-top: -3px;
+  }
+  input[type="checkbox"].ios8-switch-lg + label:before {
+    width: 68px;
+    height: 47px;
+    border-radius: 20px;
+  }
+  }
+
+.fe_video {
+  width:100%;
+
+  }
+
+
+
+@media (max-width: 549px) {
+  .fe_signup {
+    position: absolute;
+    margin-top: -119%;
+    font-size: 1.2em;
+    border: 2px solid white;
+    padding: 6px;
+    text-align: center;
+    margin-left: 33%;
+  }
+
+.fe_toolkit {
+    position: absolute;
+    font-family: 'Chalkduster';
+    font-size: 1.4em;
+    margin-top: -93%;
+    margin-left: 9%;
+    text-shadow: 3px 3px black;
+}
+
+.fe_access {
+    position: absolute;
+    font-family: 'futura';
+    font-size: 1.2em;
+    margin-top: -74%;
+    margin-left: 7%;
+    width: 85%;
+    text-shadow: 1px 1px black;
+}
+
+.fe_center {
+    position: absolute;
+    font-family: 'futura';
+    font-size: 1em;
+    margin-top: -35%;
+    margin-left: 14.8%;
+    text-shadow: 1px 1px black;
+}
+
+  .fe_flip {
+    font-family: 'futura';font-size: 12px;top: 101px;left: 672px;width: 240px; margin-left:27px; color:#F0F0F0;
+  }
+.fe_arrow {
+    position: absolute;
+    width: 49%;
+    margin-left: -34px;
+    top: 10px;
+    -webkit-transform: rotate(100deg);
+    transform: rotate(112deg);
+}
+  .fe_switch {
+    margin-left: 54px;
+    margin-top: -3px;
+  }
+  input[type="checkbox"].ios8-switch-lg + label:before {
+    width: 68px;
+    height: 47px;
+    border-radius: 20px;
+}
+nav select {
+    margin-top: -29px;
+    margin-right: -52px;
+    display: block;
+    border-radius: 0;
+}
+video[Attributes Style] {
+    width: 300%;
+  
+}
+  .fe_video {
+  width:260%;
+
+  }
+  [class*="span"], .uneditable-input[class*="span"], .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 85%;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .list_item {
+    margin-left: 8%;
+  }
+  .brand img {
+    height: 100px;
+    margin: -3px auto;
+    margin-left: 19px;
+    width: 100%;
+  }
+  .copyright > p {
+    font-size: .8em;
+    margin-left: -116px;
+    margin-top: 3px;
+  }
+.modal-bg {
+    background: #E69500;
+    position: fixed;
+    top: 34%;
+    left: 1%;
+    margin-left: 2%;
+    width: 93%;
+    height: 33%;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+.popup-btn-close {
+    position: absolute;
+    top: -328px;
+    right: 14px;
+    color: #4EBD79;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 99999;
+}
+.popup-mobile {position: absolute; background-color:transparent; top: 0; left: 0; margin: 30px 0 0; width: 1px;
+} 
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 700px;
+    margin-left: -350px;
+    padding: 50px 30px;
+    background: transparent;
+    font-size: 19px;
+    line-height: 30px;
+    border: 10px solid #150E2D;
+    z-index: 9999;
+}
+
+
+}
+
+
+.popup-mobile {position: absolute; top: 0; left: 0; margin: 30px 0 0; width: 1px;} 
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 0px;
+    margin-left: -350px;
+    padding: 50px 30px;
+    background: transparent;
+    color: #333;
+    font-size: 19px;
+    line-height: 30px;
+    border: 10px solid #150E2D;
+    z-index: 9999;
+}
+
+.modal_tofade {
+  opacity:1;
+    -webkit-transition:2s;
+/*      transition: opacity .5s ;
+   -moz-transition: opacity .5s ;
+   -webkit-transition: opacity .5s ;*/
+}
+.modal_tofade.clicked{
+    margin-right:500px;
+    opacity:0;
+ }
+ .modal_fadein {
+  opacity:0;
+  margin-right:-500px;
+  -webkit-transition:2s;
+  margin-top: -100px;
+ }
+.modal_fadein.clicked {
+    margin-top: -100px;
+    margin-right: 450px;
+    opacity: 1;
+    float: right;
+}
+
+.fe_parent {
+  position: relative;
+  width:100%;
+}
+
+.fe_center, .fe_switch, .fe_flip, .fe_toolkit, .fe_start, .fe_access {
+    left: 0;
+    right: 0;
+    margin-left: -94px;
+    margin-right: -125px;
+    position: absolute;
+}
+
+.fe_start2 {
+    padding: 15px;
+    margin-top: -175px;
+    margin-left: -96px;
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+    border: 2px solid white;
+}
+
+.fe_start { transition: all .4s ease-in-out; }
+.fe_start:hover { transform: scale(1.2); }
+
+.fe_signup { transition: all .4s ease-in-out; }
+.fe_signup:hover { transform: scale(1.2); }
+
+
+@media (min-width: 925px) {
+.textyhead {
+  padding-top:5%;
+}
+}
+
+@media (min-width: 990px) {
+.textyhead {
+/*  padding-top:10%;*/
+}
+}
+
+@media (min-width: 1100px) {
+.textyhead {
+/*  padding-top:23%;*/
+}
+}
+
+@media (max-width: 550px) {
+.fe_signup {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    border:none;
+}
+.fe_signup2 {
+  padding: 15px;
+    border: 2px solid white;
+}
+}
+
+@media (min-width: 900px) {
+.fe_signup {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    border:none;
+}
+.fe_signup2 {
+  padding: 15px;
+    border: 2px solid white;
+}
+}
+
+.servDetil {
+  text-align:center;
+}
+
+.servDetil p {
+  text-shadow:1px 1px gray;
+}
+
+.servDetil h4 {
+  text-shadow: 1px 1px white;
+}
+
+.whitecblacks {
+ /* text-shadow: 2px 2px #A1BFFE;*/
+  color:black !important;
+}
+
+@media (max-width: 400px) {
+.ifmobile {
+  background-color: #4C4C4C;
+} }
+
+.navleft {
+  margin-left: -329px;
+}
+.brand img {
+    width: 80%;
+    margin-left: -143px;
+    margin-top: 3px;
+    /* height: 65px; */
+}
+}
+
+.logoAppear {
+  display:none;
+  color:green;
+}
+
+ @media (min-width: 1400px) {
+.fe_toolkit {
+  margin-top:-56%;
+  }
+  }
+
+@media (min-width: 100px) {
+  .textbox {
+    color: white; text-shadow:2px 2px #4C4C4C; font-size:2.8vw; margin:0px 15px 0px 15px;
+  }
+  }
+
+@media (min-width: 600px) {
+  .textbox {
+    color: white; text-shadow:2px 2px #4C4C4C; font-size:2.5vw; margin:0px 15px 0px 15px;
+  }
+  .borderbox {width:80%;height:200px;background:rgba(171,173,134,.3);color:black; margin: 0 auto; border-radius:50px; border:5px solid navy
+  }
+  }
+
+  @media (min-width: 800px) {
+    .textbox {
+      color: white; text-shadow:2px 2px #4C4C4C; font-size:2vw; margin:0px 15px 0px 15px;
+    }
+     .borderbox {width:80%;height:200px;background:rgba(171,173,134,.3);color:black; margin: 0 auto; border-radius:50px; border:5px solid navy
+    }
+    }
+
+  @media (min-width: 1000px) {
+  .textbox {
+    color: white; text-shadow:2px 2px #4C4C4C; font-size:1.7vw; margin:0px 15px 0px 15px;
+  }
+  .borderbox {width:80%;height:210px;background:rgba(171,173,134,.3);color:black; margin: 0 auto; border-radius:50px; border:5px solid navy
+  }
+  }
+
+  @media (min-width: 1200px) {
+  .textbox {
+    color: white; text-shadow:2px 2px #4C4C4C; font-size:1.6vw; margin:0px 15px 0px 15px;
+  }
+  .borderbox {width:80%;height:190px;background:rgba(171,173,134,.3);color:black; margin: 0 auto; border-radius:50px; border:5px solid navy
+  }
+  }
+
+.outer-container {
+    border: 1px dotted black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.inner-container {
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+    text-align:center;
+}
+.video-overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 10px;
+    padding: 5px 5px;
+    font-size: 20px;
+    font-family: Helvetica;
+    color: #FFF;
+    background-color: rgba(50, 50, 50, 0.3);
+}
+video {
+    width: 100%;
+    height: 100%%;
+}
+
+#gradient {
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
+}
+
+</style>
+
+  <!-- Second navbar for sign in -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <!--  <a class="navbar-brand" href="#">Brand</a> -->
+          <div style="position:relative;min-width:960px">
+            <a href="http://empireofryan.github.io"><img src="images/logo.png" alt="Logo" class="logo" style="position: absolute;left:0px;top:0px"></a>
+           <!--  <span>Hello</span> -->
+          </div>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="grid collapse navbar-collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-left" style="font-family:'Futura'; margin-top:5px">
+            <li class="logoAppear" style="margin-left:60px"><a href="#" class="logoAppear" style="display:none">WebRock - <i>Top Web Development Videos</i></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right" style="font-family:'Futura'; margin-top:5px">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Lessons</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a class="btn btn-default btn-outline btn-circle collapsed" style="background-color:#0aaff1; color:white" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign In</a>
+            </li>
+            <li>
+              <a class="btn btn-default btn-outline btn-circle collapsed" style="background-color:#0aaff1; color:white" href="#">Get Started</a>
+            </li>
+          </ul>
+          <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2" style="margin-top:5px">
+            <form class="navbar-form navbar-right form-inline" role="form">
+              <div class="form-group">
+                <label class="sr-only" for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="Password">Password</label>
+                <input type="password" class="form-control" id="Password" placeholder="Password" required />
+              </div>
+              <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+
+<div class="fullwidthvideo" style="height:100%">
+              <video class="bg_video" autoplay loop>
+                <source src="ryandotcomweb.mp4" type="video/mp4">
+         
+                Your browser does not support the video tag.
+              </video>
+</div>
+
+<section class="intro" id="gradient" style="margin-top:20px; margin-bottom:-20px">
+    <div class="container">
+      <div class="row textyhead">
+        <div class="span12" data-animate-scroll='{"y":"50", "duration": ".9","scaleX": "0","scaleY": "0"}' class="text-center">
+          <h3 style="text-align:center"></h3>
+        </div>
+      </div>
+    </div>
+<!-- </section>   -->
+
+<!-- <section id="service" class="services"> -->
+    <div class="container">
+      <div class="row" style="margin-top:10px">
+        <div class="span12">
+          <div class="titleHead" data-animate-scroll='{"scaleX": "1.2","scaleY": "1.2", "alpha": "0", "duration": ".8"}' >
+            <div class="borderbox">
+            <h2 class="whitecblacks" style="text-shadow:1px 1px white; padding-top:17px">Topics Covered</h2>
+            <p class="textbox grid-item">The frontend of every website consists of three components - HTML, CSS, & JavaScript. <br/>Learn the essential components to create the look and feel of any site you want.</p>
+            </div>
+              </div><br><br><br><br>
+          
+
+
+      <div class="">
+          <div class="servContent animateScroll col-xs-12 col-sm-6 col-md-4 col-lg-4" data-animate-scroll='{"x": "-200","rotationY":"-150", "duration": "2.5"}'>
+            <div class="ico">
+              <img src="images/icons/Responsive@2x.png" alt="ma">
+            </div>
+            <div class="servDetil">
+            <h4>Responsive Design</h4>
+            <p>Create websites that look stunning on desktops, tablets, and mobile devices.</p>
+            </div>
+          </div>
+
+          <div class="servContent col-xs-12 col-sm-6 col-md-4 col-lg-4" data-animate-scroll='{"duration": "2","rotationY":"-30","scaleX": "0","scaleY": "0"}'>
+            <div class="ico">
+              <img src="images/icons/Spaceship@2x.png" alt="">
+            </div>
+            <div class="servDetil">
+            <h4>LEAN Deployment</h4>
+            <p>Put your live site on the web in minutes, with free hosting.</p>
+            </div>
+          </div>
+
+          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4 servContent" data-animate-scroll='{"x": "150","rotationY":"100", "duration": "2.5"}'>
+            <div class="ico">
+              <img src="images/icons/Graph@2x.png" alt="">
+            </div>
+            <div class="servDetil">
+            <h4>Version Control</h4>
+            <p>Follow professional developer protocols using GitHub.</p>
+            </div>
+          </div>
+
+          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4 servContent" data-animate-scroll='{"x": "-200","rotationY":"-150", "duration": "2.5"}'>
+            <div class="ico">
+              <img src="images/icons/Gift-Box@2x.png" alt="">
+            </div>
+            <div class="servDetil">
+            <h4>Custom Fonts</h4>
+            <p>Live to your full aesthetic potential by implementing any possible font.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 servContent" data-animate-scroll='{"duration": "2","rotationY":"-30","scaleX": "0","scaleY": "0"}'>
+            <div class="ico">
+              <img src="images/icons/File@2x.png" alt="plasma">
+            </div>
+            <div class="servDetil">
+            <h4>Documentation</h4>
+            <p>Follow walkthroughs on how to read up on newest technologies.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 servContent" data-animate-scroll='{"x": "150","rotationY":"100", "duration": "2.5"}'>
+            <div class="ico">
+              <img src="images/icons/Magic@2x.png" alt="plasma">
+            </div>
+            <div class="servDetil">
+            <h4>Javascript & JQuery</h4>
+            <p>Explore popular Javascript plug-ins like JQuery and Skroller.</p>
+            </div>
+          </div>
+          <div class="servContent col-xs-12 col-sm-6 col-md-4 col-lg-4" data-animate-scroll='{"x": "-200","rotationY":"-150", "duration": "2.5"}'>
+            <div class="ico">
+              <img src="images/icons/Shield@2x.png" alt="plasma">
+            </div>
+            <div class="servDetil">
+            <h4>Parallax Scrolling</h4>
+            <p>Create eye-popping narratives and visual guides with scroll effects.</p>
+            </div>
+          </div>
+
+          <div class="servContent col-xs-12 col-sm-6 col-md-4 col-lg-4" data-animate-scroll='{"duration": "2","rotationY":"-30","scaleX": "0","scaleY": "0"}'>
+            <div class="ico">
+              <img src="images/icons/Letter-Symbol@2x.png" alt="plasma">
+            </div>
+            <div class="servDetil">
+            <h4>Twitter Bootstrap</h4>
+            <p>Become well-versed in the popular framework for responsive web development.</p>
+            </div>
+          </div>
+
+          <div class="servContent col-xs-12 col-sm-6 col-md-4 col-lg-4" data-animate-scroll='{"x": "150","rotationY":"100", "duration": "2"}'>
+            <div class="ico">
+              <img src="images/icons/Retina-Ready@2x.png" alt="plasma">
+            </div>
+            <div class="servDetil">
+            <h4>CSS Animations</h4>
+            <p>Take your proficiency up an extra notch with sophisticated animated elements.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="span12 port_left">
+          <div class="titleHead">
+            <h3 style="color:white; text-shadow:1px 1px gray" data-animate-scroll='{"duration": "2","rotationY":"-30","scaleX": "0","scaleY": "0"}'>Your Portfolio</h3>
+            <p style="color:white; text-shadow:1px 1px gray" data-animate-scroll='{"duration": "2","rotationY":"-30","scaleX": "0","scaleY": "0"}'>All lessons build upon concepts learned.<br/>By the conclusion of the class you'll have a live website to showcase your skills.<br>
+            </p>
+          </div>
+          
+          <!--DIVIDER-->
+          <div class="divider">
+            <div class="divLine"></div>
+            <div class="divImg">
+              <i class="icon fui-image"></i>
+            </div>
+            <div class="divLine"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--begin isotope -->
+              <div class="isotope">
+                  
+                  <!--begin portfolio_list -->   
+                  <ul id="list" class="portfolio_list">
+                      <!--begin span3 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 responsive animateScroll" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_1.jpg" class="fancybox" data-rel="gallery1" title="Get up and running fast using Twitter bootstrap to set up a modern navbar, sidebar, and footer.">
+                                  <img src="images/photos/project_1.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>HTML/CSS Cheat Sheet</h2>
+                              <p>HTML / CSS, Bootstrap</p>
+                          </div>
+                          
+                      </li>
+                      <!--end span4 -->
+                      
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 responsive " data-animate-scroll='{"x": "-100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);" />
+                          <div class="view view-first">
+                              <a href="images/photos/project_2.jpg" class="fancybox" data-rel="gallery1" title="Take CSS a leap further by adding tables and content that respond optimally to all sites.">
+                                  <img src="images/photos/project_2.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>Mobile, Tablet, Desktop</h2>
+                              <p>Responsive Web Design</p>
+                          </div>
+                          
+                      </li>
+                      <!--end span4 -->
+                      
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 responsive animateScroll" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_3.jpg" class="fancybox" data-rel="gallery1" title="">
+                                  <img src="images/photos/project_3.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>Understanding Github</h2>
+                              <p>Version Control,<br> Web Hosting</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                       
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 responsive animateScroll" data-animate-scroll='{"x": "-100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_4.jpg" class="fancybox" data-rel="gallery1" title="Tolpis barbata (mariluzpicado)">
+                                  <img src="images/photos/project_4.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>Sublime Shortcuts</h2>
+                              <p>Text Editor, Terminal</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                    </div>
+                  </div>
+
+                <div class="row">
+
+                      
+                      <!--begin span4 -->
+                           <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 responsive animateScroll" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_5.jpg" class="fancybox" data-rel="gallery1" title="Tolpis barbata (mariluzpicado)">
+                                  <img src="images/photos/project_5.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                           <h2>Navbars, Sidebars, Footers</h2>
+                              <p>Sticky Headers, Hamburger Menu</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                      
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 animateScroll" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first 100cont">
+                              <a href="images/photos/project_6.jpg" class="fancybox 100cont" data-rel="gallery1" title="Title Goes Here">
+                                  <img src="images/photos/project_6.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>Photos & Videos</h2>
+                              <p>Background Videos, YouTube Embedded, Carousel</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                      
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 branding animateScroll" data-animate-scroll='{"x": "-100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_7.jpg" class="fancybox" data-rel="gallery1" title="Title Goes Here">
+                                  <img src="images/photos/project_7.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>Parallax Scrolling</h2>
+                              <p>Skrollr.js</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                       
+                      <!--begin span4 -->
+                         <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 branding animateScroll" data-animate-scroll='{"x": "-100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_8.jpg" class="fancybox" data-rel="gallery1" title="Title Goes Here">
+                                  <img src="images/photos/project_8.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>CSS Animations</h2>
+                              <p>Movement, Transition, Timing</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                      </div>
+                    
+                    <div class="row">
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 mobile animateScroll" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_9.jpg" class="fancybox" data-rel="gallery1" title="Title Goes Here">
+                                  <img src="images/photos/project_9.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>APIs</h2>
+                              <p>Login with Facebook/Google, Twitter/Instagram feeds, Comments</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                      
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 mobile animateScroll" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_10.jpg" class="fancybox" data-rel="gallery1" title="Title Goes Here">
+                                  <img src="images/photos/project_10.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>Selling</h2>
+                              <p>Cart & Checkout, Paypal/Swipe integration</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                      
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 responsive animateScroll" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);">
+                          <div class="view view-first">
+                              <a href="images/photos/project_11.jpg" class="fancybox" data-rel="gallery1" title="Title Goes Here">
+                                  <img src="images/photos/project_11.jpg" alt="Title Goes Here">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+                      
+                          <div class="portfolio_details">
+                              <h2>Portfolio</h2>
+                              <p>Your site live on the web, Freelancing, Creating Invoices, Joining the Developer Community</p>
+                          </div>
+                      </li>
+                      <!--end span4 -->
+                      
+                      <!--begin span4 -->
+                      <li class="list_item col-xs-12 col-sm-6 col-md-3 col-lg-3 mobile" data-animate-scroll='{"x": "-100","y": "0", "alpha": "0", "duration": ".5"}' style="-webkit-transform: translate3d(0px, 0px, 1px); visibility: inherit; opacity: 1; transform-style: flat; transform: translate3d(0px, 0px, 1px);" />
+                          <div class="view view-first">
+                              <a href="images/photos/project_12.jpg" class="fancybox" data-rel="gallery1" title="Title Goes Here">
+                                  <img src="images/photos/project_12.jpg">
+                                  <span class="mask">
+                                      <span class="fui-search zoom"></span>
+                                  </span>
+                              </a>
+                          </div>
+         
+
+                          <div class="portfolio_details">
+                              <h2>Further Learning</h2>
+                              <p>SASS, AngularJS, AJAX, Compass, Grunt, Node, Rails, Greensock.</p>
+                          </div>
+                      </li> <!--end span4 --> 
+                  </ul> <!--end portfolio_list -->
+                  
+              </div>
+              <!--end isotope -->
+      </div>
+    </div>  
+  </section>
+
+
+
+
+
+  <section id="signup" class="price separator2 default">
+    <video class="fe_video" autoplay loop>
+      <source src="movie.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="container" style="margin-top:-80px">
+      <div class="price-title"> SIGN UP </div>
+      <div class="price-title fe_parent" >
+        <span class="popup-trigger"><!-- <span class="fe_signup fe_signup2" style="margin-top:-400px">SIGN UP</span> -->
+  <div id="responsive_headline" class="fe_toolkit transition" style="color: #D6AD33; text-align:center">FrontEnd Toolkit</div>
+  <div class="fe_access transition" style="color: #DEBD5C; text-shadow: 4px 4px black; text-align:center">
+
+        Instant access<br>
+3+ hours video content<br>
+Downloadable demo files<br>
+Customized 12 section portfolio</div>
+    
+    <script>
+$(".").css({ opacity: '0' });   
+    </script>
+
+        <div class="fe_center" >
+          <!--  <div style="margin-left:200px; margin-top:100px; width: 208px" data-animate-scroll='{"duration": "2","rotationY":"-30","scaleX": "0","scaleY": "0"}'> -->
+            <span class="fe_start popup-trigger"><span class="fe_start2">Start Now</span></span>
+            <!-- <img src="images/arrow.gif" alt="arrow" class="fe_arrow">
+            <br><br>
+            <input type='checkbox' class='ios8-switch ios8-switch-lg' id='checkbox-3' style="display:none;">
+            <label for='checkbox-3' class="fe_switch"></label> --><!-- </a> -->
+          </div>
+      <br><br>
+  </div>
+</section>
+
+ <footer class="footer" style="width: 100%; background-color:black; height:50px;">
+      <div class="container">
+        <p class="text-muted" style="color: white;
+    text-align: center;
+    z-index: 9999999999999;
+    font-size: 17px;
+    margin-top: 17px;
+    font-family: 'futura';
+">&#169; 2015 WebRock</p>
+      </div>
+    </footer>
+
+  
+  <script type="text/javascript" src="js/jquery.waypoints.js"></script>
+  <script type="text/javascript" src="js/jquery.animate-scroll.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
+  <script type="text/javascript" src="js/EasePack.min.js"></script>
+  <script type="text/javascript" src="js/fadeInScroll.jQuery.js"></script>
+  <script type="text/javascript" src="js/scrollmagic.js"></script>
+  <script src="js/bootstrap-switch.js"></script>
+  <script src="js/jquery.html5video.js" type="text/javascript"></script>
+  <script src="js/jquery.bpopup.min.js" type="text/javascript"></script>
+
+
+  <script>
+  $(document).ready(function() {
+    $(".logoAppear").delay(3000).fadeIn(500);
+  });
+  </script>
+
+    <script>
+  // $(document).ready(function() {
+  //   $(".logoAppear").click( function() { alert('clicked'); });
+  // });
+  </script>
+
+<script>
+$('.btn_name').on('click', function() {
+    $('.modal_tofade').toggleClass('clicked');
+    $('.modal_fadein').toggleClass('clicked');
+});
+</script>
+
+
+<script>
+// Popup Window
+var scrollTop = '';
+var newHeight = '100';
+ 
+$(window).bind('scroll', function() {
+  scrollTop = $( window ).scrollTop();
+  newHeight = scrollTop - 3200;
+});
+    
+$('.popup-trigger').click(function(e) {
+  e.stopPropagation();
+  if(jQuery(window).width() < 767) {
+    $(this).after( $( ".popup" ) );
+    $('.popup').show().addClass('popup-mobile').css('top', 0);
+      $(".modal-bg").fadeTo("slow", 1);
+    $('html, body').animate({
+      scrollTop: $('.popup').offset().top
+    }, 500);   
+  } else {
+    $('.popup').removeClass('popup-mobile').css('top', newHeight).toggle();
+  };
+});
+    
+$('html').click(function() {
+  $('.popup').hide();
+});
+ 
+$('.popup-btn-close').click(function(e){
+  $('.popup').hide();
+});
+ 
+$('.popup').click(function(e){
+  e.stopPropagation();
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('section').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object -1000 ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+
+    
+        $('#portfolio').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_object -2000 ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+
+</script>
+
+<script>
+$(document).animateScroll(); 
+</script>
+
+<script>
+$(document).ready(function() {
+  $('.fadey').fadeInScroll({
+    minDistance:  75 * $(window).height() / 100
+    });
+  });
+</script>
+
+<script>
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},3500);
+                
+            }
+
+            else if ( bottom_of_window > bottom_of_object - 1200 ){
+                
+                $(this).animate({'opacity':'0'},100);
+                
+            }
+            else if ( bottom_of_window > bottom_of_object + 1200 ){
+                
+                $(this).animate({'opacity':'0'},100);
+                
+            }
+        }); 
+    });
+});
+</script>
+
+<script>
+$(function() {
+    $(window).scroll( function(){
+    
+       
+        $('.fadeInBlock').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
+            bottom_of_window = bottom_of_window + 200;  
+          
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                    
+            }
+        }); 
+    
+    });
+});
+</script>
+
+<script>
+// $("#responsive_headline").fitText();
+</script>
+
+<script>
+  $(function() {
+    $('#toggle-two').bootstrapToggle({
+      on: 'Enabled',
+      off: 'Disabled'
+    });
+  })
+</script>
+
+<script>
+$(function() {
+$("[name='bootstrap-switch']").bootstrapSwitch();
+});
+</script>
+
+<script>
+var colors = new Array(
+  [62,35,255],
+  [60,255,60],
+  [255,35,98],
+  [45,175,230],
+  [255,0,255],
+  [255,128,0]);
+
+var step = 0;
+//color table indices for: 
+// current color left
+// next color left
+// current color right
+// next color right
+var colorIndices = [0,1,2,3];
+
+//transition speed
+var gradientSpeed = 0.002;
+
+function updateGradient()
+{
+  
+  if ( $===undefined ) return;
+  
+var c0_0 = colors[colorIndices[0]];
+var c0_1 = colors[colorIndices[1]];
+var c1_0 = colors[colorIndices[2]];
+var c1_1 = colors[colorIndices[3]];
+
+var istep = 1 - step;
+var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+ $('#gradient').css({
+   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+  
+  step += gradientSpeed;
+  if ( step >= 1 )
+  {
+    step %= 1;
+    colorIndices[0] = colorIndices[1];
+    colorIndices[2] = colorIndices[3];
+    
+    //pick two new target color indices
+    //do not pick the same as the current one
+    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    
+  }
+}
+
+setInterval(updateGradient,10);
+</script>
+
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
