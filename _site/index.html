@@ -17,6 +17,23 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
 
+<script>
+$(function () {
+    var $element = $('#recommend');
+    function fadeInOut () {
+        $element.fadeIn(1000, function () {
+            $element.fadeOut(1500, function () {
+                $element.fadeIn(1500, function () {
+                    setTimeout(fadeInOut, 500);
+                });
+            });
+        });
+    }
+
+    fadeInOut();
+});
+</script>
+
 <style>
 * {
   box-sizing: border-box;
@@ -742,7 +759,7 @@ html, body {
       <p style="font-size:1.2em; float:right;margin-top:14px">Rails with AngularJS</p>
       <ul><a href="sinatratravel.html">Sinatra Project<br><span style="font-size:18px">Travel operator app to delegate passengers to cruise ships</span></a></ul>
       <p style="font-size:1.2em; float:right;margin-top:14px">Sinatra</p>
-      <ul><span style="margin-left:-120px; margin-right:15px; color:red; font-family:'Gotham'; font-weight: 700;">Recommend -></span><a href="indiefilm.html">Rails with JQuery<br><span style="font-size:18px">Playable Rock Paper Scissors Single Page App Game</span></a></ul>
+      <ul><span id="recommend" style="margin-left:-120px; margin-right:15px; color:red; font-family:'Gotham'; font-weight: 700;">Recommend -></span><a href="railsjquery.html">Rails with JQuery<br><span style="font-size:18px">Playable Rock Paper Scissors Single Page App Game</span></a></ul>
       <p style="font-size:1.2em; float:right; margin-top:14px">Rails/JavaScript</p>
       <ul><a href="indiefilm.html">Rails with AngularJS<br><span style="font-size:18px">Here's Sinatra</span></a></ul>
 <!--       <p style="font-size:1.2em; float:right; margin-top:14px">Rails/JavaScript</p>
@@ -798,6 +815,11 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
+
+
+
+
+
 </script>
 
 <script>
