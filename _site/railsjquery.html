@@ -623,8 +623,18 @@ p {font-size: 1.2em;}
     <i>Ship Model</i>
       <img src="rockpaperscissors.png" style="width:100%">
     <br><br>
-    The User model has many CruiseShips, allowing an admin to control the creation of the fleet.<br><br>
-    <i>User Model</i>
+    The choice model (responsibe for the throw of rock, paper, or scissors) belongs to a game and a winner. The private method 'set_winner_id_and_result', positioned in the model, abides by fat model skinny controller best practices. Looking into how the algorithm works, it captures all possible combinations for a player_one win, loss, and draw. 
+    <br><br>
+    Choice Model<br>
+    <img src="choicemodel.png" style="width:100%">
+    <br><br>
+    <img src="gamemodel.png" style="width:100%">
+    <br><br>
+    <img src="playermodel.png" style="width:100%">
+    <br><br>
+    <img src="schema.png" style="width:100%">
+    <br><br>
+    <i>Here Player 1 chose Rock while Player 2 chooses Paper</i>
       <img src="rockpaperscissorsplay.png" style="width:100%">
     <br><br>
     <i>App Walkthrough</i><br>
