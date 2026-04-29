@@ -2,12 +2,74 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/jpeg" href="/photos/dharma-wheel-clean.jpg" />
+    <link rel="apple-touch-icon" href="/photos/dharma-wheel-clean.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Weekly meditation classes and Buddhist teachings in Williamsburg, Brooklyn. Drop-in classes, workshops, and retreats. All levels welcome.">
+    <link rel="canonical" href="https://meditationinwilliamsburg.org/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kadampa Meditation Center Williamsburg">
+    <meta property="og:description" content="Weekly meditation classes and Buddhist teachings in Williamsburg, Brooklyn. All levels welcome.">
+    <meta property="og:url" content="https://meditationinwilliamsburg.org/">
+    <meta property="og:image" content="https://meditationinwilliamsburg.org/photos/KMCWBStudents.jpg">
+    <meta property="og:site_name" content="Kadampa Meditation Center Williamsburg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kadampa Meditation Center Williamsburg">
+    <meta name="twitter:description" content="Weekly meditation classes and Buddhist teachings in Williamsburg, Brooklyn. All levels welcome.">
+    <meta name="twitter:image" content="https://meditationinwilliamsburg.org/photos/KMCWBStudents.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BuddhistTemple",
+      "name": "Kadampa Meditation Center Williamsburg",
+      "url": "https://meditationinwilliamsburg.org",
+      "description": "Weekly meditation classes and Buddhist teachings in Williamsburg, Brooklyn. All levels welcome.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "120 N 6th St",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "postalCode": "11249",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7182,
+        "longitude": -73.9612
+      },
+      "email": "info@meditationinwilliamsburg.org",
+      "sameAs": ["https://www.instagram.com/kmcwilliamsburg/"]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Quattrocento:wght@400;700&family=Poppins:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Kadampa Meditation Center Williamsburg</title>
+    <title>Meditation Classes in Williamsburg, Brooklyn | Kadampa Meditation Center</title>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFR04WZ3NT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CFR04WZ3NT');
+    </script>
+
+    <!-- Microsoft Clarity Analytics -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "w5l3afrqlq");
+    </script>
 
     <!-- Single Page Apps for GitHub Pages -->
     <script>
@@ -22,10 +84,16 @@
         }
       }(window.location))
     </script>
-    <script type="module" crossorigin src="/assets/index-Nmb5Mdbx.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Wlji0n8A.css">
+    <script type="module" crossorigin src="/assets/index-BgOkTPss.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BapkMnnf.css">
   </head>
   <body>
+    <!-- Hidden form for Netlify form detection (SPA) -->
+    <form name="newsletter" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="first-name" />
+      <input type="text" name="last-name" />
+      <input type="email" name="email" />
+    </form>
     <div id="root"></div>
   </body>
 </html>
